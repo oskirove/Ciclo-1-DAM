@@ -34,6 +34,19 @@ Los sistemas de numeración son métodos para representar números. Los más com
 | Octal   | 8    | 0-7                |
 | Hexadecimal | 16 | 0-9, A-F          |
 
+
+#### Conversiones de Unidades de Almacenamiento
+
+| Unidad   | Equivalencia                  | Equivalencia en Base 2            |
+|----------|-------------------------------|-----------------------------------|
+| 1 Bit    | 1 Bit                         | 1 Bit                             |
+| 1 Byte   | 8 Bits                        | 2³ Bits                           |
+| 1 Kilobit (Kb) | 1024 Bits               | 2¹⁰ Bits                          |
+| 1 Megabit (Mb) | 1024 Kilobits           | 2²⁰ Bits                          |
+| 1 Gigabit (Gb) | 1024 Megabits           | 2³⁰ Bits                          |
+| 1 Terabit (Tb) | 1024 Gigabits           | 2⁴⁰ Bits                          |
+
+
 #### Código Binario
 
 El código binario es la base de la informática. Cada bit puede ser 0 o 1.
@@ -704,7 +717,51 @@ La configuración local de Windows incluye ajustes de sistema, red y seguridad.
 
 ### Tema 8: Redes de ordenadores. IPs. Subnetting
 
-Las redes de ordenadores permiten la comunicación entre dispositivos. A continuación, se profundiza en los conceptos de direccionamiento IP y subnetting.
+Las redes de ordenadores permiten la comunicación entre dispositivos. A continuación, se profundiza en los conceptos de direccionamiento IP, subnetting y los modelos de referencia OSI y TCP/IP, así como en los protocolos más utilizados.
+
+#### Modelos de Referencia
+
+##### Modelo OSI (Open Systems Interconnection)
+
+El modelo OSI es un marco conceptual que estandariza las funciones de un sistema de comunicación en siete capas distintas.
+
+**Esquema del Modelo OSI:**
+
+```
++-------------------+
+| 7. Aplicación     |
++-------------------+
+| 6. Presentación   |
++-------------------+
+| 5. Sesión         |
++-------------------+
+| 4. Transporte     |
++-------------------+
+| 3. Red            |
++-------------------+
+| 2. Enlace de Datos|
++-------------------+
+| 1. Física         |
++-------------------+
+```
+
+##### Modelo TCP/IP
+
+El modelo TCP/IP es un conjunto de protocolos de comunicación utilizados en Internet y redes similares. Tiene cuatro capas.
+
+**Esquema del Modelo TCP/IP:**
+
+```
++-------------------+
+| 4. Aplicación     |
++-------------------+
+| 3. Transporte     |
++-------------------+
+| 2. Internet       |
++-------------------+
+| 1. Acceso a Red   |
++-------------------+
+```
 
 #### Direccionamiento IP
 
@@ -754,6 +811,10 @@ Supongamos que tenemos una red `192.168.1.0/24` y queremos dividirla en cuatro s
      - Subred 3: `192.168.1.128/26` (Rango: `192.168.1.129` a `192.168.1.190`, Broadcast: `192.168.1.191`)
      - Subred 4: `192.168.1.192/26` (Rango: `192.168.1.193` a `192.168.1.254`, Broadcast: `192.168.1.255`)
 
+>[!TIP]
+> Utiliza calculadoras de subredes para simplificar el proceso de subnetting.
+
+
 ##### Tipos de Direcciones IP
 
 - **Dirección de Red**: Identifica la red. Ejemplo: `192.168.1.0`.
@@ -765,6 +826,22 @@ Supongamos que tenemos una red `192.168.1.0/24` y queremos dividirla en cuatro s
 - **Públicas**: Direcciones únicas en Internet. Ejemplo: `8.8.8.8`.
 - **Privadas**: Direcciones utilizadas dentro de redes locales. Ejemplo: `192.168.0.0/16`, `10.0.0.0/8`, `172.16.0.0/12`.
 
->[!TIP]
-> Utiliza calculadoras de subredes para simplificar el proceso de subnetting.
+#### Protocolos de Red
 
+A continuación, se describen algunos de los protocolos más utilizados en redes de ordenadores:
+
+- **ARP (Address Resolution Protocol)**: Resuelve direcciones IP a direcciones MAC en una red local.
+- **TCP (Transmission Control Protocol)**: Protocolo orientado a la conexión que garantiza la entrega de datos en el mismo orden en que fueron enviados.
+- **UDP (User Datagram Protocol)**: Protocolo no orientado a la conexión que permite el envío de datagramas sin garantía de entrega.
+- **SSH (Secure Shell)**: Protocolo para acceder de forma segura a dispositivos remotos.
+- **HTTP (Hypertext Transfer Protocol)**: Protocolo para la transferencia de documentos web.
+- **HTTPS (HTTP Secure)**: Versión segura de HTTP que utiliza SSL/TLS para cifrar la comunicación.
+- **FTP (File Transfer Protocol)**: Protocolo para la transferencia de archivos entre sistemas.
+- **SMTP (Simple Mail Transfer Protocol)**: Protocolo para el envío de correos electrónicos.
+- **DNS (Domain Name System)**: Sistema que traduce nombres de dominio a direcciones IP.
+- **DHCP (Dynamic Host Configuration Protocol)**: Protocolo que asigna dinámicamente direcciones IP a dispositivos en una red.
+- **ICMP (Internet Control Message Protocol)**: Protocolo utilizado para enviar mensajes de control y error en redes IP. Ejemplo: `ping`.
+- **NTP (Network Time Protocol)**: Protocolo para sincronizar los relojes de los dispositivos en una red.
+- **SNMP (Simple Network Management Protocol)**: Protocolo para la administración y monitoreo de dispositivos de red.
+- **POP3 (Post Office Protocol 3)**: Protocolo para la recepción de correos electrónicos.
+- **IMAP (Internet Message Access Protocol)**: Protocolo para acceder y gestionar correos electrónicos en un servidor.

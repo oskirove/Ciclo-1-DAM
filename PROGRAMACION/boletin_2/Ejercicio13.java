@@ -4,7 +4,7 @@
  decide el usuario).
  b) Programa que dé el resultado de la suma de números impares entre 0 y N (N
  lo decide el usuario).
- c) Programa que dé el resultado de la suma de números pares por una parte e
+ c Programa que dé el resultado de la suma de números pares por una parte e
  impares por otro entre 0 y N (N lo decide el usuario). Debe realizarse con
  un único bucle.
 */
@@ -33,17 +33,43 @@ public class Ejercicio13 {
                 case 1:
                     System.out.print("Introduce un valor: ");
                     int n1 = sc.nextInt();
+                    int acumuladorPares = 0;
 
-                    for (int i = 0; i < n1; i += 2) {
-                        
+                    for (int i = 0; i <= n1; i++) {
+                        if (i % 2 == 0) {
+                            acumuladorPares += i;
+                        }
                     }
-                    
+                    System.out.println("La suma de los números pares hasta " + n1 + " es: " + acumuladorPares);
                     break;
                 case 2:
+                    System.out.print("Introduce un valor: ");
+                    int n2 = sc.nextInt();
+                    int acumuladorImpares = 0;
 
+                    for (int i = 0; i <= n2; i++) {
+                        if (i % 2 != 0) {
+                            acumuladorImpares += i;
+                        }
+                    }
+                    System.out.println("La suma de los números pares hasta " + n2 + " es: " + acumuladorImpares);
                     break;
                 case 3:
+                    System.out.print("Introduce un valor: ");
+                    int n3 = sc.nextInt();
+                    int acumuladorPar = 0;
+                    int acumuladorImpar = 0;
 
+                    for (int i = 0; i <= n3; i++) {
+                        if (i % 2 != 0) {
+                            acumuladorImpar += i;
+                        }
+                        if (i % 2 == 0) {
+                            acumuladorPar += i;
+                        }
+                    }
+                    System.out.println("La suma de los números pares hasta " + n3 + " es: " + acumuladorPar
+                            + " y la suma de los números impares hasta " + n3 + " es: " + acumuladorImpar);
                     break;
                 case 0:
                     System.out.println("Saliendo del programa");

@@ -121,8 +121,5 @@ Los atajos de teclado mejoran la productividad. Aquí algunos importantes:
 >[!TIP]
 > Puedes personalizar los atajos de teclado desde la configuración de VS Code.
 
->[!TIP]
-> Puedes personalizar los atajos de teclado desde la configuración de VS Code.
-
 ## Conclusión
 Visual Studio Code es una herramienta poderosa y flexible para el desarrollo de software. Con las extensiones adecuadas, snippets personalizados y el conocimiento de comandos y atajos de teclado, puedes optimizar tu flujo de trabajo y ser más productivo.

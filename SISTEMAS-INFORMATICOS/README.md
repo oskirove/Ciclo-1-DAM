@@ -3,21 +3,56 @@
 ## Índice
 1. [Primera Evaluación](#primera-evaluación)
     - [Tema 1: Sistemas de numeración. Código Binario](#tema-1-sistemas-de-numeración-código-binario)
+        - [Sistemas de Numeración](#sistemas-de-numeración)
+        - [Código Binario](#código-binario)
+        - [Conversiones de Unidades de Almacenamiento](#conversiones-de-unidades-de-almacenamiento)
     - [Tema 2: Arquitecturas de ordenadores. Memoria](#tema-2-arquitecturas-de-ordenadores-memoria)
         - [Arquitectura de Von Neumann](#arquitectura-de-von-neumann)
         - [Arquitectura de Harvard](#arquitectura-de-harvard)
         - [Comparación y Uso Actual](#comparación-y-uso-actual)
         - [Tipos de Memoria](#tipos-de-memoria)
     - [Tema 3: Hardware](#tema-3-hardware)
+        - [Componentes Principales](#componentes-principales)
     - [Tema 4: Sistema de archivos. Particiones](#tema-4-sistema-de-archivos-particiones)
+        - [Tipos de Sistemas de Archivos](#tipos-de-sistemas-de-archivos)
+        - [Particiones](#particiones)
 2. [Segunda Evaluación](#segunda-evaluación)
     - [Tema 5: Consola de Windows. Programación en batch](#tema-5-consola-de-windows-programación-en-batch)
+        - [Comandos Básicos](#comandos-básicos)
+        - [Comandos de Gestión de Archivos y Directorios](#comandos-de-gestión-de-archivos-y-directorios)
+        - [Comandos de Información del Sistema](#comandos-de-información-del-sistema)
+        - [Comandos de Red](#comandos-de-red)
+        - [Comandos de Administración de Usuarios](#comandos-de-administración-de-usuarios)
+        - [Comandos de Programación en Batch](#comandos-de-programación-en-batch)
+        - [Programación en Batch](#programación-en-batch)
+            - [Estructuras Básicas](#estructuras-básicas)
+            - [Tipos de Operadores](#tipos-de-operadores)
     - [Tema 6: Consola de Linux. Programación básica de scripts](#tema-6-consola-de-linux-programación-básica-de-scripts)
+        - [Comandos Básicos](#comandos-básicos-1)
+        - [Comandos de Gestión de Archivos y Directorios](#comandos-de-gestión-de-archivos-y-directorios-1)
+        - [Comandos de Información del Sistema](#comandos-de-información-del-sistema-1)
+        - [Comandos de Red](#comandos-de-red-1)
+        - [Comandos de Administración de Usuarios](#comandos-de-administración-de-usuarios-1)
+        - [Comandos de Programación en Bash](#comandos-de-programación-en-bash)
+        - [Programación en Bash](#programación-en-bash)
+            - [Estructuras Básicas](#estructuras-básicas-1)
+            - [Tipos de Operadores](#tipos-de-operadores-1)
 3. [Tercera Evaluación](#tercera-evaluación)
     - [Tema 7: Configuración local de Windows](#tema-7-configuración-local-de-windows)
+        - [Ajustes Comunes](#ajustes-comunes)
     - [Tema 8: Redes de ordenadores. IPs. Subnetting](#tema-8-redes-de-ordenadores-ips-subnetting)
-
----
+        - [Modelos de Referencia](#modelos-de-referencia)
+            - [Modelo OSI (Open Systems Interconnection)](#modelo-osi-open-systems-interconnection)
+            - [Modelo TCP/IP](#modelo-tcpip)
+        - [Direccionamiento IP](#direccionamiento-ip)
+            - [IPv4](#ipv4)
+            - [IPv6](#ipv6)
+        - [Subnetting](#subnetting)
+            - [Conceptos Básicos de Subnetting](#conceptos-básicos-de-subnetting)
+            - [Ejemplo de Subnetting](#ejemplo-de-subnetting)
+            - [Tipos de Direcciones IP](#tipos-de-direcciones-ip)
+            - [Clasificación de Direcciones IP](#clasificación-de-direcciones-ip)
+        - [Protocolos de Red](#protocolos-de-red)
 
 ## Primera Evaluación
 
@@ -43,21 +78,24 @@ El código binario es la base de la informática. Cada bit puede ser 0 o 1.
 
 #### Conversiones de Unidades de Almacenamiento
 
-| Unidad   | Equivalencia                  | Equivalencia en Base 2            |
-|----------|-------------------------------|-----------------------------------|
-| 1 Bit    | 1 Bit                         | 1 Bit                             |
-| 1 Byte   | 8 Bits                        | 2³ Bits                           |
-| 1 Kilobit (Kb) | 1024 Bits               | 2¹⁰ Bits                          |
-| 1 Megabit (Mb) | 1024 Kilobits           | 2²⁰ Bits                          |
-| 1 Gigabit (Gb) | 1024 Megabits           | 2³⁰ Bits                          |
-| 1 Terabit (Tb) | 1024 Gigabits           | 2⁴⁰ Bits                          |
+**Bits y sus Múltiplos:**
 
-| Unidad   | Equivalencia                  |
-|----------|-------------------------------|
-| 1 Byte   | 2³ Bits (8 Bits)              |
-| 1 Kilobyte (KB) | 2¹⁰ Bytes (1024 Bytes) |
-| 1 Megabyte (MB) | 2²⁰ Bytes (1,048,576 Bytes) |
-| 1 Gigabyte (GB) | 2³⁰ Bytes (1,073,741,824 Bytes) |
+| Unidad           | Equivalencia                  | Equivalencia en Base 2            |
+|------------------|-------------------------------|-----------------------------------|
+| 1 Bit            | 1 Bit                         | 1 Bit                             |
+| 1 Kilobit (Kb)   | 1024 Bits                     | 2¹⁰ Bits                          |
+| 1 Megabit (Mb)   | 1024 Kilobits                 | 2²⁰ Bits                          |
+| 1 Gigabit (Gb)   | 1024 Megabits                 | 2³⁰ Bits                          |
+| 1 Terabit (Tb)   | 1024 Gigabits                 | 2⁴⁰ Bits                          |
+
+**Bytes y sus Múltiplos:**
+
+| Unidad           | Equivalencia                  | Equivalencia en Base 2            |
+|------------------|-------------------------------|-----------------------------------|
+| 1 Byte           | 8 Bits                        | 2³ Bits                           |
+| 1 Kilobyte (KB)  | 1024 Bytes                    | 2¹⁰ Bytes (1024 Bytes)            |
+| 1 Megabyte (MB)  | 1024 Kilobytes                | 2²⁰ Bytes (1,048,576 Bytes)       |
+| 1 Gigabyte (GB)  | 1024 Megabytes                | 2³⁰ Bytes (1,073,741,824 Bytes)   |
 
 ### Tema 2: Arquitecturas de ordenadores. Memoria
 

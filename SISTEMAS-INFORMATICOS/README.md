@@ -48,10 +48,6 @@
             - [IPv4](#ipv4)
             - [IPv6](#ipv6)
         - [Subnetting](#subnetting)
-            - [Conceptos Básicos de Subnetting](#conceptos-básicos-de-subnetting)
-            - [Ejemplo de Subnetting](#ejemplo-de-subnetting)
-            - [Tipos de Direcciones IP](#tipos-de-direcciones-ip)
-            - [Clasificación de Direcciones IP](#clasificación-de-direcciones-ip)
         - [Protocolos de Red](#protocolos-de-red)
 
 ## Primera Evaluación

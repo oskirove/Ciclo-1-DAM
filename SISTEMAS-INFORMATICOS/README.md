@@ -34,6 +34,12 @@ Los sistemas de numeración son métodos para representar números. Los más com
 | Octal   | 8    | 0-7                |
 | Hexadecimal | 16 | 0-9, A-F          |
 
+#### Código Binario
+
+El código binario es la base de la informática. Cada bit puede ser 0 o 1.
+
+>[!TIP]
+> Para convertir de decimal a binario, divide el número por 2 y anota el residuo. Repite hasta que el cociente sea 0.
 
 #### Conversiones de Unidades de Almacenamiento
 
@@ -45,16 +51,6 @@ Los sistemas de numeración son métodos para representar números. Los más com
 | 1 Megabit (Mb) | 1024 Kilobits           | 2²⁰ Bits                          |
 | 1 Gigabit (Gb) | 1024 Megabits           | 2³⁰ Bits                          |
 | 1 Terabit (Tb) | 1024 Gigabits           | 2⁴⁰ Bits                          |
-
-
-#### Código Binario
-
-El código binario es la base de la informática. Cada bit puede ser 0 o 1.
-
->[!TIP]
-> Para convertir de decimal a binario, divide el número por 2 y anota el residuo. Repite hasta que el cociente sea 0.
-
-#### Conversión de Bytes a Bits y Gigabytes
 
 | Unidad   | Equivalencia                  |
 |----------|-------------------------------|

@@ -75,11 +75,12 @@ El código binario es la base de la informática. Cada bit puede ser 0 o 1.
 
 **Bytes y sus Múltiplos:**
 | Unidad           | Equivalencia                  | Equivalencia en Base 2            | Equivalencia en Bits             |
+| Unidad           | Equivalencia                  | Equivalencia en Base 2            | Equivalencia en Bits             |
 |------------------|-------------------------------|-----------------------------------|----------------------------------|
-| 1 Byte           | 8 Bits                        | 2³ Bits                           | 8 Bits                           |
-| 1 Kilobyte (KB)  | 1024 Bytes                    | 2¹⁰ Bytes (1024 Bytes)            | 8,192 Bits                       |
-| 1 Megabyte (MB)  | 1024 Kilobytes                | 2²⁰ Bytes (1,048,576 Bytes)       | 8,388,608 Bits                   |
-| 1 Gigabyte (GB)  | 1024 Megabytes                | 2³⁰ Bytes (1,073,741,824 Bytes)   | 8,589,934,592 Bits               |
+| 1 Byte           | 8 Bits                        | 2³ Bits                           | 2³ Bits                          |
+| 1 Kilobyte (KB)  | 1024 Bytes                    | 2¹⁰ Bytes                         | 2¹³ Bits                         |
+| 1 Megabyte (MB)  | 1024 Kilobytes                | 2²⁰ Bytes                         | 2²³ Bits                         |
+| 1 Gigabyte (GB)  | 1024 Megabytes                | 2³⁰ Bytes                         | 2³³ Bits                         |
 
 ### Tema 2: Arquitecturas de ordenadores. Memoria
 

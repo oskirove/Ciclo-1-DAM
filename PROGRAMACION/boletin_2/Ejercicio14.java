@@ -17,35 +17,23 @@ import java.util.Scanner;
 public class Ejercicio14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int opcion;
+        int salida = 1;
         int contador = 0;
+        int contadorTotal = 0;
 
-        do {
-            System.out.println("Menú de opciones");
-            System.out.println("----------------");
-            System.out.println("1.- Suma los números pares entre 0 y un número que elijas");
-            System.out.println("2.- Suma los números impares entre 0 y un número que elijas");
-            System.out.println("3.- Hacer ambas");
-            System.out.println("0.- Salir del menú\n");
+        while (salida != 0) {
+                System.out.print("Introduce un número: ");
+                salida = sc.nextInt();
+                contadorTotal++;
 
-            System.out.print("Introduce una opción: ");
-            opcion = sc.nextInt();
-            System.out.println();
-
-            switch (opcion) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 0:
-                    System.out.println("Saliendo del programa");
-                    break;
-                default:
-                    System.out.println("Opción no válida.");
-                    break;
-            }
-        } while (opcion != 0);
+                if (salida < 0) {
+                    contador++;
+                }
+        }
+        if (contador == 1){
+            System.out.println("Se introdujo " + contador + " número negativo de un total de " + (contadorTotal - 1) + ".");
+        } else {
+            System.out.println("Se introdujeron " + contador + " números negativos de un total de " + (contadorTotal - 1) + ".");
+        }
     }
 }

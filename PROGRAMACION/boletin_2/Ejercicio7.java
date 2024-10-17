@@ -29,23 +29,21 @@ public class Ejercicio7 {
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    while (activador) {
+                    int n1 = 1;
+                    while (n1 == 0) {
                         System.out.print("Introduce un número o introduce 0 para salir al menú: ");
 
-                        int n1 = sc.nextInt();
+                        n1 = sc.nextInt();
                         contador++;
 
                         /*
-                        Creamos una variable a la que se le sumará 
-                        el valor de n1 en cada vuelta del bucle
-                        */
+                         * Creamos una variable a la que se le sumará
+                         * el valor de n1 en cada vuelta del bucle
+                         */
                         acumulador += n1;
 
-                        if (n1 == 0) {
-                            System.out.println("La media es: " + (acumulador - 1) / contador);
-                            activador = false;
-                        }
                     }
+                    System.out.println("La media es: " + (acumulador - 1) / contador);
                 case 2:
                     System.out.println("Saliendo del programa");
                     break;

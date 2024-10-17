@@ -21,16 +21,11 @@ public class Ejercicio8 {
         float n3 = sc.nextInt();
 
         if (n1 > n2 && n1 > n3){
-            if (n1 == n2 || n1 == n3) {
-                System.out.printf("El número %.2f es mayor que %.2f y que %.2f%n", n1, n2, n3);
-            }
-            System.out.printf("El número %.2f es mayor que %.2f y que %.2f%n", n1, n2, n3);
-        } else if (n2 > n1 && n2 > n3) {
-            System.out.printf("El número %.2f es mayor que %.2f y que %.2f%n", n2, n1, n3);
-        } else if (n3 > n1 && n3 > n2) {
-            System.out.printf("El número %.2f es mayor que %.2f y que %.2f%n", n3, n1, n2);
+            System.out.printf("El número %.2f es mayor", n1);
+        } else if ( n2 > n3) {
+            System.out.printf("El número %.2f es mayor ", n3);
         } else {
-            System.out.printf("Los 3 números son iguales: %.2f, %.2f, %.2f%n", n1, n2, n3);
+            System.out.println("El mayor es");
         }
     }
 }

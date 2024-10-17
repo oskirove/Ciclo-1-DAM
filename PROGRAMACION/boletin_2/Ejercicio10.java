@@ -28,6 +28,9 @@ public class Ejercicio10 {
          finalmente reasignar el valor de temp1 a n2 y el valor de temp2 a n1
         */
         temp1 = n1;
+        //n1=n2;
+        //n2=temp1;
+
         temp2 = n2;
         n2 = temp1;
         n1 = temp2;

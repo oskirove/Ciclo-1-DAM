@@ -40,24 +40,30 @@ public class Ejercicio6 {
             switch (opcion) {
                 case 1:
                     System.out.println("Introduce un número: ");
-                    int n1 = sc.nextInt();
-                    int cuadrado = n1 * n1;
-                    System.out.println("El cuadrado de " + n1 + " es: " + cuadrado);
+                    double n1 = sc.nextDouble();
+                    double cuadrado = n1 * n1;
+                    System.out.printf("El cuadrado de %.2f es %.2f%n", n1, cuadrado);
                     break;
                 case 2:
-                    System.out.println("Introduce un número: ");
-                    float n2 = sc.nextFloat();
-                    float inverso = 1 / n2;
-                    System.out.printf("El inverso de %.2f es %.2f%n", n2, inverso);
+                    double n2; //TODO repetir si es negativo
+                    do {
+                        System.out.println("Introduce un número: ");
+                        n2 = sc.nextDouble();
+                        if (n2 == 0) {
+                            System.out.println("El número no puede ser 0");
+                        }
+                    } while (n2 == 0);
+                    double inverso = 1 / n2;
+                    System.out.printf("El inverso de %.4f es %.4f%n", n2, inverso);
                     break;
                 case 3:
                     System.out.println("Introduce un número: ");
-                    Double n3 = sc.nextDouble();
+                    double n3 = sc.nextDouble();
                     if (n3 < 0) {
                         System.out.println("El número introducido no es válido");
                         break;
                     }
-                    Double raiz = Math.sqrt(n3);
+                    double raiz = Math.sqrt(n3);
                     System.out.printf("La raiz cuadrada de %.2f es %.3f%n", n3, raiz);
                     break;
                 case 4:

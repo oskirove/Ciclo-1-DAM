@@ -13,7 +13,7 @@ public class ejercicio1 {
          rango 0-99 a 1-100.
          (Con (int) convertimos el número aleatorio de double a int)
 
-         INFO: El método Math.random() devuelve un valor decimal aleatorio 
+         NOTA: El método Math.random() devuelve un valor decimal aleatorio 
          (tipo double) entre 0.0 y 1.0. Esto significa 
          que el valor generado puede ser cualquier número decimal desde 0.0 hasta 
          justo antes de 1.0.

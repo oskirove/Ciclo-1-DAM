@@ -22,10 +22,16 @@ public class ejercicio17 {
 
         int acumulador = 0;
         char continuar;
+        int num;
 
         do{
-            System.out.print("Introduce un número entre 1 y 50: ");
-            int num = sc.nextInt();
+            do {
+                System.out.print("Introduce un número entre 1 y 50: ");
+                num = sc.nextInt();
+                if (num < 1 || num > 50) {
+                    System.out.println("ERROR: El número debe estar entre 1 y 50.");
+                }
+            } while (num < 1 || num > 50);
 
             for (int i = 1; i <= 100; i++) {
                 if (i % num == 0) {
@@ -35,7 +41,7 @@ public class ejercicio17 {
             }
             System.out.println("La suma de los múltiplos es: " + acumulador);
 
-            System.out.println("Deseas continuar S/N: ");
+            System.out.print("Deseas continuar S/N: ");
             continuar = sc.next().charAt(0);
 
         } while (continuar != 'N' && continuar != 'n');

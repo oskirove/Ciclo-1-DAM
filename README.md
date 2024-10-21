@@ -1,4 +1,4 @@
-<h1 align="center"> README - Ciclo 1º DAM </h1>
+<h1 align="center"> 1º DAM </h1>
 
 <h3 align="center"> Este repositorio contiene material y recursos para todas las asignaturas del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM). </h3>
 

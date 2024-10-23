@@ -14,7 +14,6 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-
 public class ejercicio2 {
 
     public static void funcionLineas(int n) {
@@ -40,22 +39,24 @@ public class ejercicio2 {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.print("Introduce tu nombre: ");
         String nombre = sc.nextLine();
-        
+
         funcionLineas(20);
 
         System.out.print("Introduce un número: ");
         int num = sc.nextInt();
         System.out.println();
 
-    try (PrintWriter f = new PrintWriter("Datos.txt")) {
-        f.println(nombre);
-        f.println(num);
-        f.println("El n.º es " + (par(num) ? "par" : "impar") + " y " + (FuncionPoN(num) == 'P' ? "positivo" : "negativo") + ".");
-        
-        System.out.println("Hola " + nombre + ", tu número es " + (FuncionPoN(num) == 'P' ? "positivo" : "negativo") + " y además es un número " + (par(num) ? "par." : "impar."));
-        System.out.println("Esta información se guardará en el Datos.txt.");
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+        try (PrintWriter f = new PrintWriter("Datos.txt")) {
+            f.println(nombre);
+            f.println(num);
+            f.println("El n.º es " + (par(num) ? "par" : "impar") + " y "
+                    + (FuncionPoN(num) == 'P' ? "positivo" : "negativo") + ".");
+
+            System.out.println("Hola " + nombre + ", tu número es " + (FuncionPoN(num) == 'P' ? "positivo" : "negativo")
+                    + " y además es un número " + (par(num) ? "par." : "impar."));
+            System.out.println("Esta información se guardará en el Datos.txt.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -63,8 +63,7 @@ public class Ejercicio13 {
                     for (int i = 0; i <= n3; i++) {
                         if (i % 2 != 0) {
                             acumuladorImpar += i;
-                        }
-                        if (i % 2 == 0) {
+                        }else{
                             acumuladorPar += i;
                         }
                     }

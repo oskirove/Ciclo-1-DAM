@@ -17,7 +17,7 @@ package PROGRAMACION.boletin_2;
 import java.util.Scanner;
 
 public class ejercicio17 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {// TODO revisar suma al probar varias veces
         Scanner sc = new Scanner(System.in);
 
         int acumulador = 0;

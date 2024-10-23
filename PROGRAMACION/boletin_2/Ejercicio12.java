@@ -40,12 +40,12 @@ public class Ejercicio12 {
                     }
                     break;
                 case 2:
-                    for (int i = 50; i >= 0; i--) {
+                    for (int i = 50; i > 0; i--) {
                         System.out.println(i);
                     }
                     break;
                 case 3:
-                    for (int i = 1; i <= 20; i++) {
+                    for (int i = 1; i < 20; i++) {
                         if (i % 2 == 0) {
                             System.out.println(i);
                         }

@@ -45,7 +45,7 @@ public class Ejercicio6 {
                     System.out.printf("El cuadrado de %.2f es %.2f%n", n1, cuadrado);
                     break;
                 case 2:
-                    double n2; //TODO repetir si es negativo
+                    double n2; 
                     do {
                         System.out.println("Introduce un número: ");
                         n2 = sc.nextDouble();

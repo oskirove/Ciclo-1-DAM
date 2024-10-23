@@ -29,7 +29,7 @@ public class Ejercicio20 {
 
         System.out.println();
 
-        int altura = 5;
+        int altura = 8;
 
         /*
          Creamos un bucle externo que nos
@@ -51,9 +51,6 @@ public class Ejercicio20 {
              Ahora creamos otro bucle para los asteriscos de la derecha 
              donde K, si es menor o IGUAL a la variable "i" del primer bucle, 
              se detendrá y dejará de imprimir los asteriscos en la misma linea
-
-             NOTA: En cada iteración, k se incrementa en 1. 
-             Esto significa que el bucle se ejecutará i + 1 veces.
             */
             for (int k = 0; k <= i; k++) {
                 System.out.print("*");

@@ -17,76 +17,53 @@ public class ejercicio16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int opcion;
+        // TODO comprobar rangos de 1 a 100 | SOLUCIONADO
+
+        int numAleatorio;
 
         do {
+            System.out.print("Jugador 1, intoduce un numero entre 0 y 100: ");
+            numAleatorio = sc.nextInt();
+        } while (numAleatorio > 100 || numAleatorio < 0);
+
+        boolean activador = false;
+        int contador = 5;
+
+        for (int i = 0; i < 40; i++) {
             System.out.println();
-            System.out.println("Bienvenido a adivina el número");
-            System.out.println("------------------------------");
-            System.out.println("1.- Jugar");
-            System.out.println("0.- Salir\n");
+        }
 
-            System.out.print("Selecciona una opción: ");
-            opcion = sc.nextInt();
-            System.out.println();
+        // TODO revisar si gana en ultimo intento | SOLUCIONADO
+        System.out.println("Jugador 2, debes adivinar el número en 5 intentos.");
+        while (activador == false) {
+            System.out.print("Introduce un valor: ");
+            int numUsuario = sc.nextInt();
+            contador--;
 
-            switch (opcion) {
-                case 1:
-
-                    System.out.print("Jugador 1, intoduce un numero entre 0 y 100: ");
-                    int numAleatorio = sc.nextInt();
-
-                    boolean activador = false;
-                    int contador = 5;
-                    
-                    for (int i = 0; i < 40; i++) {
-                        System.out.println();
-                    }
-
-                    System.out.println("Jugador 2, debes adivinar el número en 5 intentos.");
-                    while (activador == false) {
-                        System.out.print("Introduce un valor: ");
-                        int numUsuario = sc.nextInt();
-                        contador--;
-
-                        if (contador == 1){
-                            System.out.println("Te queda " + contador + " intento");
-                        } else {
-                            System.out.println("Te quedan " + contador + " intentos");
-                        }
-
-                        if (numUsuario > numAleatorio) {
-                            System.out.println("El número objetivo es menor");
-                            System.out.println();
-                        } else {
-                            System.out.println("El número objetivo es mayor");
-                            System.out.println();
-                        }
-
-                        if (contador == 0){
-                            System.out.println("Has perdido :(");
-                            activador = true;
-                        } else if (numAleatorio == numUsuario) {
-                            System.out.println("**************************");
-                            System.out.println("Enorabuena has acertado!!!");
-                            System.out.println("**************************");
-                            activador = true;
-                        }
-                    }
-
-
-                    break;
-
-                case 0:
-                    System.out.println("Saliendo del juego");
-                    break;
-
-                default:
-                    System.out.println("Opción no válida.");
-                    break;
-
+            if (contador == 1) {
+                System.out.println("Te queda " + contador + " intento");
+            } else {
+                System.out.println("Te quedan " + contador + " intentos");
             }
-        } while (opcion != 0);
 
+            if (numUsuario > numAleatorio) {
+                System.out.println("El número objetivo es menor");
+                System.out.println();
+            } else {
+                System.out.println("El número objetivo es mayor");
+                System.out.println();
+            }
+
+            if (numAleatorio == numUsuario) {
+                System.out.println("**************************");
+                System.out.println("Enorabuena has acertado!!!");
+                System.out.println("**************************");
+                activador = true;
+            } else if ((numAleatorio != numUsuario && contador == 0)) {
+                System.out.println("Has perdido :(");
+                activador = true;
+            }
+
+        }
     }
 }

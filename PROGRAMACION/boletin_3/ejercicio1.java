@@ -1,23 +1,75 @@
+/*
+ En el mismo archivo haz las siguientes funciones:
+ a) Codifica un método que deje en pantalla n líneas en blanco ( es un parámetro).
+ No devuelve nada. 
+
+ b) Escribe una función denominada par con un único parámetro entero. Devuelve
+ true si el parámetro es número par y false si no lo es. No muestra nada.
+ 
+ c) Escribir una función que tenga un argumento (otra forma de llamar a un
+ parámetro) de tipo entero y que devuelva la letra ‘P’ (devuelve char) si el número
+ es positivo o cero y la letra ‘ N’ si es negativo. Intenta hacerlo con el operador
+ ternario (ver Apéndice I del Tema 2); si no te sale hazlo con if.
+
+ d) En el programa principal primero pides el nombre del usuario. A continuación
+ dejas deja 10 líneas en blanco mediante la 1ª función. Luego pides un número
+ entero al usuario e indicas si es par y positivo o negativo.
+*/
+
 package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
 
 public class ejercicio1 {
+
+    /**
+     * Deja en pantalla n líneas en blanco
+     * @param n
+     */
+
+    public static void funcionLineas(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println();
+        }
+    }
+
+    /**
+     * Devuelve true si el parámetro es número par y false si no lo es
+     * @param numPar
+     * @return
+     */
+
+    public static boolean par(int numPar) {
+        if (numPar % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Devuelve 'P' si el número es positivo o cero y 'N' si es negativo
+     * @param num
+     * @return
+     */
+
+    public static char FuncionPoN(int num) {
+        char resultado = (num < 0) ? 'N' : 'P';
+        return resultado;
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.print("Introduce tu nombre: ");
+        String nombre = sc.nextLine();
+        
+        funcionLineas(20);
 
-        /*
-         Creamos un número aleatorio entre 1 y 100 con el metodo Math.random()
-         el cual debemos multiplicar por 100 para escalar el rango del número
-         aleatorio de 0.0 a 100.0 y finalmente le sumamos 1 para que pase de un
-         rango 0-99 a 1-100.
-         (Con (int) convertimos el número aleatorio de double a int)
+        System.out.print("Introduce un número: ");
+        int num = sc.nextInt();
+        System.out.println();
 
-         NOTA: El método Math.random() devuelve un valor decimal aleatorio 
-         (tipo double) entre 0.0 y 1.0. Esto significa 
-         que el valor generado puede ser cualquier número decimal desde 0.0 hasta 
-         justo antes de 1.0.
-        */
-        int numAleatorio = (int) (Math.random() * 100) + 1;
+        System.out.println("Hola " + nombre + ", tu número es " + (FuncionPoN(num) == 'P' ? "positivo" : "negativo") + " y además es un número " + ((par(num) == true) ? "par." : "impar."));
+
     }
 }

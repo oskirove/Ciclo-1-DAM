@@ -20,7 +20,7 @@ package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
 
-public class ejercicio1 {
+public class Ejercicio1 {
 
     /**
      * Deja en pantalla n líneas en blanco

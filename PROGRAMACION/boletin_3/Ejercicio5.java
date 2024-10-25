@@ -37,7 +37,7 @@ public class Ejercicio5 {
             };
             f.close();
         } catch (Exception e) {
-            System.out.println("Error: No se pudo crear el archivo.");
+            System.out.println("No se pudo crear el archivo.");
         }
 
         try {
@@ -50,7 +50,7 @@ public class Ejercicio5 {
             System.out.println();
             f.close();
         } catch (Exception e) {
-            System.out.println("Error: No se pudo leer el archivo.");
+            System.out.println("No se pudo leer el archivo.");
         }
     }   
 }

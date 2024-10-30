@@ -24,7 +24,7 @@ public class Ejercicio1 {
 
     /**
      * Deja en pantalla n líneas en blanco
-     * @param n
+     * @param n Cantidad de lineas
      */
 
     public static void funcionLineas(int n) {
@@ -34,9 +34,9 @@ public class Ejercicio1 {
     }
 
     /**
-     * Devuelve true si el parámetro es número par y false si no lo es
-     * @param numPar
-     * @return
+     *  Comprueba si un nº es par
+     * @param numPar Nº a comprobar
+     * @return true si el parámetro es número par y false si no lo es
      */
 
     public static boolean par(int numPar) {
@@ -48,9 +48,9 @@ public class Ejercicio1 {
     }
 
     /**
-     * Devuelve 'P' si el número es positivo o cero y 'N' si es negativo
-     * @param num
-     * @return
+     * Comprieba si un nº es pos o neg 
+     * @param num Nº a comprobar
+     * @return 'P' si el número es positivo o cero y 'N' si es negativo
      */
 
     public static char FuncionPoN(int num) {

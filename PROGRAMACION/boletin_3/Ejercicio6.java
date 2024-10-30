@@ -25,14 +25,28 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
 
-    public static double potencia(double baseFuncion, int exponente){
-    
-        for (int i = 1; i <= exponente; i++) {
-            System.err.println(i);
-            baseFuncion *= baseFuncion;
+    public static double potencia(double baseFuncion, int exponente) {
+
+        double resultado = 1;
+        
+        if (exponente < 0) {
+            baseFuncion = 1 / baseFuncion;
+            exponente = -exponente;
         }
 
-        return baseFuncion;
+        for (int i = 0; i < exponente; i++) {
+            resultado *= baseFuncion;
+        }
+
+        return resultado;
+    }
+
+    public static int contPotencia(double base, int exponente) {
+        for (int i = 0; i < exponente; i++){
+            System.out.printf("%.6f, ", potencia(base, i));
+        };
+
+        return 0;
     }
 
     public static void main(String[] args) {
@@ -45,6 +59,8 @@ public class Ejercicio6 {
         int exponente = sc.nextInt();
         System.out.println();
 
-        System.out.println(potencia(base, exponente));
+        System.out.printf("%.6f%n",potencia(base, exponente));
+        contPotencia(base, exponente);
+        System.out.println();
     }
 }

@@ -15,6 +15,11 @@
 package PROGRAMACION.boletin_3;
 
 public class Ejercicio4 {
+    /**
+     * Esta función determina si un año es bisiesto o no
+     * @param año
+     * @return
+     */
 
     public static boolean añoBisiesto(int año){
         if (año % 4 == 0 && (año % 100 != 0 || año % 400 == 0)){

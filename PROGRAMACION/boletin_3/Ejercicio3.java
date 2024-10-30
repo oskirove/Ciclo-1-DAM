@@ -25,14 +25,14 @@ package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
 
-public class Ejercicio3 {
+public class Ejercicio3 {//TODO retocar comentarios | SOLUCIONADO
 
     /**
      * Pide un dato real al usuario comprobando que sea un valor positivo
-     * @return
+     * @return dato introducido por el usuario
      */
 
-    public static double pedirDato() {
+    public static double pedirDato() {// TODO Informar del error si lo hay, y permitir reales entre 0 y 1 | SOLUCIONADO
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
         double dato;
@@ -40,16 +40,19 @@ public class Ejercicio3 {
         do {
             System.out.print("Introduce un número positivo: ");
             dato = sc.nextDouble();
-        } while (dato < 1);
+            if (dato < 0) {
+                System.out.println("ERROR: El número debe ser positivo.");
+            };
+        } while (dato < 0);
 
         return dato;
     }
 
     /**
      * Calcula la superficie de un cilindro
-     * @param radio
-     * @param altura
-     * @return
+     * @param radio es el radio del cilindoro
+     * @param altura es l altura del cilindro
+     * @return resultado del cálculo de la superficie
      */
 
     public static double superficieCilindro(double radio, double altura) {
@@ -60,10 +63,10 @@ public class Ejercicio3 {
     }
 
     /**
-     * Muestra en la misma línea el String y a continuación el real con 3 decimales
-     * @param resultado
-     * @param mensaje
-     * @return
+     * Muestra en la misma línea el String y a continuación el real con 3 decimales.
+     * @param resultado Cálculo de la superficie
+     * @param mensaje Mensaje que se visualizará por pantalla.
+     * @return el resultado del cálculo
      */
 
     public static double mostrarDato(String mensaje, double resultado) {
@@ -74,7 +77,10 @@ public class Ejercicio3 {
 
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
-
+        System.out.println();
+        System.out.println("Calculadora de superficie de cilindros");
+        System.out.println("=======================================");
+        System.out.println("Introduce los datos del cilindro");
         double primerValor = pedirDato();
         double segundoValor = pedirDato();
 

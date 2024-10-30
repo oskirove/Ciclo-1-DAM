@@ -12,7 +12,7 @@ package PROGRAMACION.boletin_2;
 import java.util.Scanner;
 
 public class Ejercicio18 {
-    public static void main(String[] args) {//TODO revisar 0!
+    public static void main(String[] args) {//TODO revisar 0! | SOLUCIONADO
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int n1 = sc.nextInt();
@@ -28,7 +28,7 @@ public class Ejercicio18 {
             acumuladorFor*=i;
         }
 
-        while (contadorWhile != n1) {
+        while (contadorWhile < n1) {
             contadorWhile++;
             acumuladorWhile*=contadorWhile;
         }
@@ -36,7 +36,7 @@ public class Ejercicio18 {
         do {
             contadorDoWhile++;
             acumuladorDoWhile*=contadorDoWhile;
-        } while (contadorDoWhile != n1);
+        } while (contadorDoWhile < n1);
 
         System.out.println("Este es el resultado del bucle FOR: " + acumuladorFor);
         System.out.println("Este es el resultado del bucle WHILE: " + acumuladorWhile);

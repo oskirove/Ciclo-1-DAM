@@ -24,7 +24,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Ejercicio5 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {//TODO revisar especificación
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
         System.out.print("Introduce un año: ");
@@ -41,7 +41,7 @@ public class Ejercicio5 {
         }
 
         try {
-            BufferedReader f = new BufferedReader(new FileReader("Años_Bisiestos.txt"));
+            BufferedReader f = new BufferedReader(new FileReader("Años_Bisiestos.txt"));//TODO uso de Scanner
             String linea = f.readLine();
             while (linea != null) {
                 System.out.print(linea.substring(0, 6) + ", ");

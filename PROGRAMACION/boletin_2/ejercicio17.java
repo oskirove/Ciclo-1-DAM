@@ -17,7 +17,7 @@ package PROGRAMACION.boletin_2;
 import java.util.Scanner;
 
 public class ejercicio17 {
-    public static void main(String[] args) {// TODO revisar suma al probar varias veces
+    public static void main(String[] args) {// TODO revisar suma al probar varias veces | SOLUCIONADO
         Scanner sc = new Scanner(System.in);
 
         int acumulador = 0;
@@ -36,13 +36,17 @@ public class ejercicio17 {
             for (int i = 1; i <= 100; i++) {
                 if (i % num == 0) {
                     acumulador += i;
-                    System.out.println(i);
+                    System.out.print(i + ", ");
                 }
             }
             System.out.println("La suma de los múltiplos es: " + acumulador);
 
             System.out.print("Deseas continuar S/N: ");
             continuar = sc.next().charAt(0);
+
+            if (continuar == 's' || continuar == 'S') {
+                acumulador = 0;
+            }
 
         } while (continuar != 'N' && continuar != 'n');
     }

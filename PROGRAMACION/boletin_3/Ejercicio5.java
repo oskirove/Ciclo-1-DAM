@@ -20,11 +20,10 @@ Bol3Ejer4.bisiesto(2024);
 package PROGRAMACION.boletin_3;
 
 import java.io.PrintWriter;
-import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Ejercicio5 {
-    public static void main(String[] args) {//TODO revisar especificación
+    public static void main(String[] args) throws Exception {
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
         System.out.print("Introduce un año: ");
@@ -32,25 +31,29 @@ public class Ejercicio5 {
 
         try {
             PrintWriter f = new PrintWriter("Años_Bisiestos.txt");
-            for(int contadorAños = año; contadorAños <= 2024; contadorAños++){
-                f.println((Ejercicio4.añoBisiesto(contadorAños) == true) ? contadorAños + " es bisiesto" : contadorAños + " no es bisiesto");
+            f.println((Ejercicio4.añoBisiesto(año) == true) ? año + " es bisiesto" : año + " no es bisiesto");
+
+            for (int contadorAños = año; contadorAños <= 2024; contadorAños++) {
+                if (Ejercicio4.añoBisiesto(contadorAños) == true) {
+                    if (contadorAños != año) {
+                        f.println(contadorAños);
+                    }
+                }
             };
             f.close();
         } catch (Exception e) {
             System.out.println("No se pudo crear el archivo.");
         }
 
-        try {
-            BufferedReader f = new BufferedReader(new FileReader("Años_Bisiestos.txt"));//TODO uso de Scanner
-            String linea = f.readLine();
-            while (linea != null) {
-                System.out.print(linea.substring(0, 6) + ", ");
-                linea = f.readLine();
-            }
-            System.out.println();
-            f.close();
-        } catch (Exception e) {
-            System.out.println("No se pudo leer el archivo.");
+        java.util.Scanner lector = new java.util.Scanner(new FileReader("Años_Bisiestos.txt"));
+        lector.nextLine();
+
+        while (lector.hasNextLine()) {
+            String linea = lector.nextLine();
+            System.out.printf("%-6s", linea);
         }
-    }   
-}
+
+        lector.close();
+        System.out.println();
+    };
+};

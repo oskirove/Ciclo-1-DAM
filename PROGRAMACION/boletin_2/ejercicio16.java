@@ -17,14 +17,12 @@ public class ejercicio16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // TODO comprobar rangos de 1 a 100 | SOLUCIONADO
-
         int numAleatorio;
 
         do {
             System.out.print("Jugador 1, intoduce un numero entre 0 y 100: ");
             numAleatorio = sc.nextInt();
-        } while (numAleatorio > 100 || numAleatorio < 0);
+        } while (numAleatorio > 100 || numAleatorio < 1);
 
         boolean activador = false;
         int contador = 5;
@@ -33,7 +31,6 @@ public class ejercicio16 {
             System.out.println();
         }
 
-        // TODO revisar si gana en ultimo intento | SOLUCIONADO
         System.out.println("Jugador 2, debes adivinar el número en 5 intentos.");
         while (activador == false) {
             System.out.print("Introduce un valor: ");

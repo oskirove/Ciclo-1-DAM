@@ -25,14 +25,14 @@ package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
 
-public class Ejercicio3 {//TODO retocar comentarios | SOLUCIONADO
+public class Ejercicio3 {
 
     /**
      * Pide un dato real al usuario comprobando que sea un valor positivo
      * @return dato introducido por el usuario
      */
 
-    public static double pedirDato() {// TODO Informar del error si lo hay, y permitir reales entre 0 y 1 | SOLUCIONADO
+    public static double pedirDato() {
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
         double dato;
@@ -66,13 +66,13 @@ public class Ejercicio3 {//TODO retocar comentarios | SOLUCIONADO
      * Muestra en la misma línea el String y a continuación el real con 3 decimales.
      * @param resultado Cálculo de la superficie
      * @param mensaje Mensaje que se visualizará por pantalla.
-     * @return el resultado del cálculo
+     * 
      */
 
-    public static double mostrarDato(String mensaje, double resultado) {
+    public static void mostrarDato(String mensaje, double resultado) {
         System.out.printf("%s %.2f%n", mensaje, resultado);
 
-        return resultado;
+        
     }
 
     public static void main(String[] args) {

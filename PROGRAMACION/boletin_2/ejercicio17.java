@@ -17,14 +17,15 @@ package PROGRAMACION.boletin_2;
 import java.util.Scanner;
 
 public class ejercicio17 {
-    public static void main(String[] args) {// TODO revisar suma al probar varias veces | SOLUCIONADO
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int acumulador = 0;
+        
+        int acumulador ;
         char continuar;
         int num;
-
+        
         do{
+            acumulador = 0;
             do {
                 System.out.print("Introduce un número entre 1 y 50: ");
                 num = sc.nextInt();
@@ -45,7 +46,6 @@ public class ejercicio17 {
             continuar = sc.next().charAt(0);
 
             if (continuar == 's' || continuar == 'S') {
-                acumulador = 0;
             }
 
         } while (continuar != 'N' && continuar != 'n');

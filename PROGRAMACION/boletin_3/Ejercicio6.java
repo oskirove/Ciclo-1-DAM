@@ -25,6 +25,13 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
 
+    /**
+     * Calcula la potencia de un número.
+     * @param baseFuncion es la base de la potencia.
+     * @param exponente es el exponente de la potencia.
+     * @return la potencia de la base elevada al exponente.
+     */
+
     public static double potencia(double baseFuncion, int exponente) {
 
         double resultado = 1;
@@ -41,12 +48,38 @@ public class Ejercicio6 {
         return resultado;
     }
 
-    public static int contPotencia(double base, int exponente) {
+    /**
+     * Muestra las n primeras potencias de un número.
+     * @param base es la base de la potencia.
+     * @param exponente es el número de potencias a mostrar.
+     * @return la última potencia calculada.
+     */
+
+    public static double contPotencia(double base, int exponente) {
+        double contador = 0;
         for (int i = 0; i < exponente; i++){
-            System.out.printf("%.6f, ", potencia(base, i));
+            contador = potencia(base, i);
+            System.out.printf("%.2f,%n", contador);
         };
 
-        return 0;
+        return contador;
+    }
+
+    /**
+     * Suma las n primeras potencias de un número.
+     * @param base es la base de la potencia.
+     * @param exponente es el número de potencias a sumar.
+     * @return la suma de las potencias.
+     */
+
+    public static double sumaPotencia(double base, int exponente) {
+
+        double suma = 0;
+        for (int i = 0; i < exponente; i++){
+            suma += potencia(base, i);
+        };
+
+        return suma;
     }
 
     public static void main(String[] args) {
@@ -59,8 +92,11 @@ public class Ejercicio6 {
         int exponente = sc.nextInt();
         System.out.println();
 
-        System.out.printf("%.6f%n",potencia(base, exponente));
+        System.out.printf("El resultado de la potencia es: %.6f%n",potencia(base, exponente));
+        System.out.println();
         contPotencia(base, exponente);
+        System.out.println();
+        System.out.printf("La suma de las primeras potencias es: %.2f,%n", sumaPotencia(base, exponente));
         System.out.println();
     }
 }

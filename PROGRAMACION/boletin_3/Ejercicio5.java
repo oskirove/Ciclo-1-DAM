@@ -21,10 +21,11 @@ package PROGRAMACION.boletin_3;
 
 import java.io.PrintWriter;
 import java.io.FileReader;
+import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) throws Exception {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
+        Scanner sc = new java.util.Scanner(System.in);
 
         System.out.print("Introduce un año: ");
         int año = sc.nextInt();
@@ -45,7 +46,7 @@ public class Ejercicio5 {
             System.out.println("No se pudo crear el archivo.");
         }
 
-        java.util.Scanner lector = new java.util.Scanner(new FileReader("Años_Bisiestos.txt"));
+        Scanner lector = new Scanner(new FileReader("Años_Bisiestos.txt"));
         lector.nextLine();
 
         while (lector.hasNextLine()) {

@@ -29,6 +29,7 @@ public class Ejercicio3 {
 
     /**
      * Pide un dato real al usuario comprobando que sea un valor positivo
+     * 
      * @return dato introducido por el usuario
      */
 
@@ -42,7 +43,8 @@ public class Ejercicio3 {
             dato = sc.nextDouble();
             if (dato < 0) {
                 System.out.println("ERROR: El número debe ser positivo.");
-            };
+            }
+            ;
         } while (dato < 0);
 
         return dato;
@@ -50,27 +52,28 @@ public class Ejercicio3 {
 
     /**
      * Calcula la superficie de un cilindro
-     * @param radio es el radio del cilindoro
+     * 
+     * @param radio  es el radio del cilindoro
      * @param altura es l altura del cilindro
      * @return resultado del cálculo de la superficie
      */
 
     public static double superficieCilindro(double radio, double altura) {
-        
-        double superficie = 2*3.14159265*radio*altura;
+
+        double superficie = 2 * 3.14159265 * radio * altura;
 
         return superficie;
     }
 
     /**
      * Muestra en la misma línea el String y a continuación el real con 3 decimales.
-     * @param resultado Cálculo de la superficie
-     * @param mensaje Mensaje que se visualizará por pantalla.
      * 
+     * @param resultado Cálculo de la superficie
+     * @param mensaje   Mensaje que se visualizará por pantalla.
      */
 
     public static void mostrarDato(String mensaje, double resultado) {
-        System.out.printf("%s %.2f%n", mensaje, resultado); 
+        System.out.printf("%s %.2f%n", mensaje, resultado);
     }
 
     public static void main(String[] args) {
@@ -82,7 +85,7 @@ public class Ejercicio3 {
         double primerValor = pedirDato();
         double segundoValor = pedirDato();
 
-        double resultado = superficieCilindro(primerValor,segundoValor);
+        double resultado = superficieCilindro(primerValor, segundoValor);
 
         mostrarDato("La superficie es:", resultado);
 

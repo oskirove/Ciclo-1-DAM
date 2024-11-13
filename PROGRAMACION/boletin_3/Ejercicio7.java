@@ -23,6 +23,7 @@ public class Ejercicio7 {
 
     /**
      * Lee un archivo por completo y lo muestra por pantalla como String.
+     * 
      * @param nombreArchivo es el nombre del archivo que va a leer.
      * @throws Exception si no se puede acceder al archivo.
      */
@@ -44,25 +45,27 @@ public class Ejercicio7 {
 
     /**
      * Añade texto al final de un archivo.
+     * 
      * @param nombreArchivo es el nombre del archivo al que se le añadirá texto.
      * @param textoAñadir  es el texto que se añadirá al final del archivo.
      * @throws Exception si no se puede acceder al archivo.
      */
 
     public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {
-            
-            loadFile(nombreArchivo);
-    
-            PrintWriter f = new PrintWriter(new FileWriter(nombreArchivo, true));
-            f.println();
-            f.println(textoAñadir);
-            f.close();
+
+        loadFile(nombreArchivo);
+
+        PrintWriter f = new PrintWriter(new FileWriter(nombreArchivo, true));
+        f.println();
+        f.println(textoAñadir);
+        f.close();
     };
 
     /**
      * Añade texto al final de un archivo.
+     * 
      * @param nombreArchivo2 es el nombre del archivo al que se le añadirá texto.
-     * @param textoAñadir2 es el texto que se añadirá al final del archivo.
+     * @param textoAñadir2   es el texto que se añadirá al final del archivo.
      * @throws Exception si no se puede acceder al archivo.
      */
 

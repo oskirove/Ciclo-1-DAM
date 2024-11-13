@@ -8,7 +8,7 @@
     cos(x) = 1 - x^2/2! + x^4/4! - x^6/6! + x^8/8! - x^10/10! + ...
 
  Realizar un método que realice y devuelva dicho cálculo (hazlo al menos hasta el
- termino de potencia 4. Si quiere mete más). Debes usar la función factorial hecha
+ termino de potencia 4. Si quieres mete más). Debes usar la función factorial hecha
  en el apartado anterior y la de potencia hecha en un ejercicio previo.
 
  c) Realizar un programa que muestre por pantalla los cosenos de los ángulos de 0.1
@@ -29,6 +29,7 @@ public class Ejercicio11 {
 
     /**
      * Realiza el factorial de un número.
+     * 
      * @param num Número al que se le va a realizar el factorial.
      * @return El factorial del número.
      */
@@ -37,13 +38,33 @@ public class Ejercicio11 {
         double acumulador = 1;
 
         for (double i = 1; i <= num; i++) {
-            acumulador*=i;
-        };
+            acumulador *= i;
+        }
+        ;
 
         return acumulador;
     };
-    
+    /**
+     * Realiza el cálculo del coseno de un número.
+     * @param x Número al que se le va a realizar el cálculo del coseno.
+     * @return El coseno del número.
+     */
+
+    public static double coseno(double x) {
+
+        double valorCoseno = 1;
+
+        valorCoseno -= Ejercicio6.potencia(x, 2) / factorial(2);
+        valorCoseno += Ejercicio6.potencia(x, 4) / factorial(4);
+        valorCoseno -= Ejercicio6.potencia(x, 6) / factorial(6);
+        valorCoseno += Ejercicio6.potencia(x, 8) / factorial(8);
+        valorCoseno -= Ejercicio6.potencia(x, 10) / factorial(10);
+        valorCoseno += Ejercicio6.potencia(x, 12) / factorial(12);
+
+        return valorCoseno;
+    }
+
     public static void main(String[] args) {
-        System.out.println(factorial(0));
+        System.out.println(coseno(0.3));
     }
 }

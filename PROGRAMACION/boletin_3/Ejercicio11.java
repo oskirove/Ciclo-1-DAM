@@ -24,6 +24,7 @@
 package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Ejercicio11 {
 
@@ -44,8 +45,10 @@ public class Ejercicio11 {
 
         return acumulador;
     };
+
     /**
      * Realiza el cálculo del coseno de un número.
+     * 
      * @param x Número al que se le va a realizar el cálculo del coseno.
      * @return El coseno del número.
      */
@@ -64,7 +67,23 @@ public class Ejercicio11 {
         return valorCoseno;
     }
 
+    public static void bucleCoseno() {
+
+        for (double i = 0.1; i <= 1; i += 0.1) {
+            System.out.printf("El coseno de %.1f es: %8.5f", i, coseno(i));
+            System.out.println();
+        };
+    };
+
+    public static void bucleCosenoError() {
+        for (double i = 0.1; i <= 1; i += 0.1) {
+            System.out.printf("El error absoluto es: %8.5f", coseno(i) - Math.cos(i));
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
-        System.out.println(coseno(0.3));
+        bucleCoseno();
+        System.out.println();
+        bucleCosenoError();
     }
 }

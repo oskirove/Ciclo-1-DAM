@@ -70,9 +70,7 @@ public class Ejercicio3 {
      */
 
     public static void mostrarDato(String mensaje, double resultado) {
-        System.out.printf("%s %.2f%n", mensaje, resultado);
-
-        
+        System.out.printf("%s %.2f%n", mensaje, resultado); 
     }
 
     public static void main(String[] args) {

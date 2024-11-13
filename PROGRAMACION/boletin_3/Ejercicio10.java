@@ -21,6 +21,14 @@ import PROGRAMACION.boletin_3.Ejercicio6;
 
 public class Ejercicio10 {
 
+    /**
+     * Calcula el área de un rectangulo o de un triangulo.
+     * @param base base de la figura.
+     * @param altura altura de la figura
+     * @param trigger disparador para decidir si se trata de un rectangulo o un triangulo.
+     * @return el area de la figura.
+     */
+
     public static double calcularArea(double base, double altura, boolean trigger) {
 
         if (trigger == true) {

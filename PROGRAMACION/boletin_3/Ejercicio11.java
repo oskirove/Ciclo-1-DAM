@@ -97,15 +97,12 @@ public class Ejercicio11 {
     }
 
     public static void main(String[] args) {
+
         bucleCoseno();
-
         System.out.println();
-        
         bucleCosenoError();
-
         System.out.println();
-
-        System.out.println("El factorial con la función con un bucle es: " + factorial(5));
-        System.out.println("El factorial con la función recursiva es: " + factorialRec(5));
+        System.out.println("El factorial con la función con un bucle es: " + factorial(6));
+        System.out.println("El factorial con la función recursiva es: " + factorialRec(6));
     }
 }

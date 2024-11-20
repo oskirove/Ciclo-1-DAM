@@ -94,7 +94,7 @@ public class Ejercicio12 {
             System.out.println();
             System.out.print("Introduce una opción: ");
             opcion = sc.nextInt();
-
+            
             switch (opcion) {
                 case 1:
                     lineas();

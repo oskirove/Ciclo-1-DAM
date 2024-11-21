@@ -31,16 +31,16 @@ public class Ejercicio7 {
     public static String loadFile(String nombreArchivo) throws Exception {// TODO devolver el contenido del archivo y no mostrar nada
         java.util.Scanner lector = new java.util.Scanner(new FileReader(nombreArchivo));
 
+        String linea ="";
         System.out.println();
 
         while (lector.hasNextLine()) {
-            String linea = lector.nextLine();
-            System.out.println(linea);
+            linea = lector.nextLine();
         }
 
         lector.close();
 
-        return nombreArchivo;
+        return linea;
     };
 
     /**

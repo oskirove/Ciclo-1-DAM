@@ -28,7 +28,7 @@ public class Ejercicio7 {
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static String loadFile(String nombreArchivo) throws Exception {
+    public static String loadFile(String nombreArchivo) throws Exception {// TODO devolver el contenido del archivo y no mostrar nada
         java.util.Scanner lector = new java.util.Scanner(new FileReader(nombreArchivo));
 
         System.out.println();
@@ -51,7 +51,7 @@ public class Ejercicio7 {
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {
+    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {//TODO append manual
 
         loadFile(nombreArchivo);
 
@@ -71,7 +71,7 @@ public class Ejercicio7 {
 
     public static void appendFile2(String nombreArchivo2, String textoAñadir2) throws Exception {
 
-        loadFile(nombreArchivo2);
+        //loadFile(nombreArchivo2);
 
         PrintWriter f = new PrintWriter(new FileWriter(nombreArchivo2, true));
 

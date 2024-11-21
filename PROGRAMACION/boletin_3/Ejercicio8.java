@@ -18,7 +18,13 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
 
-    public static boolean numPrimo(int numero){
+    /**
+     * Comprueba si un número es primo.
+     * @param numero es el número a comprobar.
+     * @return true si el número es primo, false si no lo es.
+     */
+
+    public static boolean numPrimo(int numero){//TODO doc
        if (numero <= 1){
         return false;
        };

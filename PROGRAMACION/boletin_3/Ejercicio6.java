@@ -68,14 +68,14 @@ public class Ejercicio6 {
     /**
      * Suma las n primeras potencias de un número.
      * @param base es la base de la potencia.
-     * @param exponente es el número de potencias a sumar.
+     * @param exponente exp max
      * @return la suma de las potencias.
      */
 
     public static double sumaPotencia(double base, int exponente) {
 
         double suma = 0;
-        for (int i = 0; i < exponente; i++){
+        for (int i = 0; i <= exponente; i++){
             suma += potencia(base, i);
         };
 

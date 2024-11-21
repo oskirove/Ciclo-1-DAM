@@ -18,29 +18,28 @@ package PROGRAMACION.boletin_3;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.FileWriter;
+import java.util.Scanner;
 
 public class Ejercicio7 {
 
     /**
-     * Lee un archivo por completo y lo muestra por pantalla como String.
+     * Lee un archivo por completo.
      * 
      * @param nombreArchivo es el nombre del archivo que va a leer.
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static String loadFile(String nombreArchivo) throws Exception {// TODO devolver el contenido del archivo y no mostrar nada
-        java.util.Scanner lector = new java.util.Scanner(new FileReader(nombreArchivo));
-
-        String linea ="";
-        System.out.println();
+    public static String loadFile(String nombreArchivo) throws Exception {// TODO devolver el contenido del archivo y no mostrar nada SOLUCIONADO
+        Scanner lector = new Scanner(new FileReader(nombreArchivo));
+        String contenido = "";
 
         while (lector.hasNextLine()) {
-            linea = lector.nextLine();
+            contenido += lector.nextLine() + "\n";
         }
 
         lector.close();
 
-        return linea;
+        return contenido;
     };
 
     /**
@@ -51,13 +50,14 @@ public class Ejercicio7 {
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {//TODO append manual
+    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {//TODO append manual SOLUCIONADO
+        String contenido = loadFile(nombreArchivo);
 
-        loadFile(nombreArchivo);
+        PrintWriter f = new PrintWriter(nombreArchivo);
 
-        PrintWriter f = new PrintWriter(new FileWriter(nombreArchivo, true));
-        f.println();
-        f.println(textoAñadir);
+        String contenidoCompleto = contenido+=textoAñadir;
+
+        f.print(contenidoCompleto);
         f.close();
     };
 
@@ -71,8 +71,6 @@ public class Ejercicio7 {
 
     public static void appendFile2(String nombreArchivo2, String textoAñadir2) throws Exception {
 
-        //loadFile(nombreArchivo2);
-
         PrintWriter f = new PrintWriter(new FileWriter(nombreArchivo2, true));
 
         f.println(textoAñadir2);
@@ -80,8 +78,6 @@ public class Ejercicio7 {
     };
 
     public static void main(String[] args) throws Exception {
-
-        appendFile("Datos.txt", "Texto appendFile (función 1)");
-        appendFile2("Datos.txt", "Texto appendFile2 (función 2)");
+        appendFile("Datos.txt", "Hola mundoooooo");
     };
 };

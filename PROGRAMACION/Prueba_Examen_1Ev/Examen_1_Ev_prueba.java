@@ -56,8 +56,7 @@ public class Examen_1_Ev_prueba {
      * Pide números reales al usuario y incluye la media o la suma de los mismos.
      * 
      * @param veces   es la cantidad de números a pedir.
-     * @param trigger es un booleano que si es true devuelve la suma y si es false
-     *                devuelve la media.
+     * @param trigger es un booleano que si es true devuelve la suma y si es false devuelve la media.
      * @return la media o la suma de los números pedidos.
      */
 
@@ -81,7 +80,7 @@ public class Examen_1_Ev_prueba {
             ;
 
         } while (contador != veces);
-
+        sc.close();
         return resultado;
     }
 
@@ -148,6 +147,6 @@ public class Examen_1_Ev_prueba {
                     System.out.println("Opcion no valida");
             }
         } while (opcion != 5);
-
+        sc.close();
     }
 }

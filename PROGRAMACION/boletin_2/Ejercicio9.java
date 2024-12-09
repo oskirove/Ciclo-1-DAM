@@ -45,5 +45,6 @@ public class Ejercicio9 {
         }
 
         System.out.println("El número máximo introducido es el " + maximo);
+        sc.close();
     }
 }

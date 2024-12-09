@@ -23,7 +23,6 @@
 
 package PROGRAMACION.boletin_3;
 
-import java.util.Scanner;
 import java.lang.Math;
 
 public class Ejercicio11 {

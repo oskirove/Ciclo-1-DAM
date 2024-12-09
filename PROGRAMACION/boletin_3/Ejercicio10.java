@@ -17,7 +17,6 @@
 package PROGRAMACION.boletin_3;
 
 import java.util.Scanner;
-import PROGRAMACION.boletin_3.Ejercicio6;
 
 public class Ejercicio10 {
 
@@ -103,5 +102,7 @@ public class Ejercicio10 {
             }
 
         } while (opcion != 0);
+
+        sc.close();
     };
 };

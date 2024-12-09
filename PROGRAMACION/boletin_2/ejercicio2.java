@@ -31,5 +31,6 @@ public class ejercicio2 {
         } else {
             System.out.println("Y no son múltiplos");
         }
+        sc.close();
     }
 }

@@ -56,5 +56,6 @@ public class Ejercicio5 {
 
         lector.close();
         System.out.println();
+        sc.close();
     };
 };

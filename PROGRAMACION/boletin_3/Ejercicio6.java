@@ -98,5 +98,6 @@ public class Ejercicio6 {
         System.out.println();
         System.out.printf("La suma de las primeras potencias es: %.2f,%n", sumaPotencia(base, exponente));
         System.out.println();
+        sc.close();
     }
 }

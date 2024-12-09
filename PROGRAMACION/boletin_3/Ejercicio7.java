@@ -29,7 +29,7 @@ public class Ejercicio7 {
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static String loadFile(String nombreArchivo) throws Exception {// TODO devolver el contenido del archivo y no mostrar nada SOLUCIONADO
+    public static String loadFile(String nombreArchivo) throws Exception {
         Scanner lector = new Scanner(new FileReader(nombreArchivo));
         String contenido = "";
 
@@ -50,12 +50,12 @@ public class Ejercicio7 {
      * @throws Exception si no se puede acceder al archivo.
      */
 
-    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {//TODO append manual SOLUCIONADO
+    public static void appendFile(String nombreArchivo, String textoAñadir) throws Exception {
         String contenido = loadFile(nombreArchivo);
 
         PrintWriter f = new PrintWriter(nombreArchivo);
 
-        String contenidoCompleto = contenido+=textoAñadir;
+        String contenidoCompleto = contenido+textoAñadir;
 
         f.print(contenidoCompleto);
         f.close();
@@ -65,7 +65,7 @@ public class Ejercicio7 {
      * Añade texto al final de un archivo.
      * 
      * @param nombreArchivo2 es el nombre del archivo al que se le añadirá texto.
-     * @param textoAñadir2   es el texto que se añadirá al final del archivo.
+     * @param textoAñadir2 es el texto que se añadirá al final del archivo.
      * @throws Exception si no se puede acceder al archivo.
      */
 

@@ -17,7 +17,6 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
-        boolean activador = true;
         int contador = -1;
         int acumulador = 1;
 
@@ -52,6 +51,6 @@ public class Ejercicio7 {
                     break;
             }
         } while (opcion != 2);
-
+        sc.close();
     }
 }

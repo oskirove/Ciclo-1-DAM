@@ -94,5 +94,6 @@ public class Ejercicio19 {
 
             }
         } while (opcion != 0);
+        sc.close();
     }
 }

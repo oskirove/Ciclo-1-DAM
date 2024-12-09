@@ -120,5 +120,6 @@ public class Ejercicio12 {
             }
 
         } while (opcion != 3);
+        sc.close();
     }
 }

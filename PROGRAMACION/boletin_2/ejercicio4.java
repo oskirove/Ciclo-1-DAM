@@ -21,5 +21,6 @@ public class ejercicio4 {
         float n2 = sc.nextFloat();
 
         System.out.printf("El número entero es: %d%nEn octal es: %5o%nEn hexadecimal es: %X\nEl número real es: %7.3f%n", n1, n1, n1, n2);
+        sc.close();
     }
 }

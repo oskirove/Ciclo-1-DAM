@@ -41,5 +41,6 @@ public class Ejercicio18 {
         System.out.println("Este es el resultado del bucle FOR: " + acumuladorFor);
         System.out.println("Este es el resultado del bucle WHILE: " + acumuladorWhile);
         System.out.println("Este es el resultado del bucle DO WHILE: " + acumuladorDoWhile);
+        sc.close();
     }
 }

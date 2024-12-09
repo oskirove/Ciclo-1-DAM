@@ -49,5 +49,6 @@ public class ejercicio17 {
             }
 
         } while (continuar != 'N' && continuar != 'n');
+        sc.close();
     }
 }

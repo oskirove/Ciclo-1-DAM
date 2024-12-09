@@ -69,9 +69,9 @@ public class Ejercicio9 {
                         if (numPrimo(i)) {
                             System.out.println(i);
                         }
-                        ;
+
                     }
-                    ;
+
                     break;
                 case 2:
                     System.out.println("Introduce el nombre del archivo: ");
@@ -91,9 +91,7 @@ public class Ejercicio9 {
                         if (numPrimo(Integer.parseInt(linea))) {
                             System.out.println(linea);
                         }
-                        ;
                     }
-                    ;
 
                     lector.close();
                     break;
@@ -108,7 +106,7 @@ public class Ejercicio9 {
                         if (numPrimo(i) == true) {
                             f.print(i + "; ");
                         }
-        
+
                     f.close();
                     break;
 
@@ -120,6 +118,8 @@ public class Ejercicio9 {
                     System.out.println("Opción no válida.");
                     break;
             }
+
         } while (opcion != 4);
+        sc.close();
     }
 }

@@ -24,7 +24,7 @@ public class Ejercicio8 {
      * @return true si el número es primo, false si no lo es.
      */
 
-    public static boolean numPrimo(int numero){//TODO doc
+    public static boolean numPrimo(int numero){
        if (numero <= 1){
         return false;
        };
@@ -47,6 +47,7 @@ public class Ejercicio8 {
                 System.out.println(i);
             }
         };
+        sc.close();
     }
 
 }

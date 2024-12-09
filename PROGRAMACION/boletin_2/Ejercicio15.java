@@ -69,5 +69,6 @@ public class Ejercicio15 {
                     break;
             }
         } while (opcion != 0);
+        sc.close();
     }
 }

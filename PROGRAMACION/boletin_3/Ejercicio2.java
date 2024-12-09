@@ -86,6 +86,6 @@ public class Ejercicio2 {
         } catch (java.io.FileNotFoundException e) {
             System.out.println("Error: No se pudo crear el archivo.");
         }
-
+        sc.close();
     }
 }

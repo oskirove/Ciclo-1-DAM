@@ -35,5 +35,6 @@ public class Ejercicio14 {
         } else {
             System.out.println("Se introdujeron " + contador + " números negativos de un total de " + (contadorTotal - 1) + ".");
         }
+        sc.close();
     }
 }

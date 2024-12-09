@@ -25,5 +25,6 @@ public class ejercicio3 {
             }
             System.out.println("La suma total de los números anteriores es: " + acumulador);
         }
+        sc.close();
     }
 }

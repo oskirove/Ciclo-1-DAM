@@ -60,7 +60,7 @@ public class ejercicio16 {
                 System.out.println("Has perdido :(");
                 activador = true;
             }
-
         }
+        sc.close();
     }
 }

@@ -38,5 +38,6 @@ public class Ejercicio4 {
             año = sc.nextInt();
             System.out.println((añoBisiesto(año) == true) ? "El año introducido es bisiesto" : "El año introducido no es bisiesto");
         }
+        sc.close();
     }
 }

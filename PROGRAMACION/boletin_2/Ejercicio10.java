@@ -36,5 +36,6 @@ public class Ejercicio10 {
         n1 = temp2;
 
         System.out.println("El primer número se ha cambiado por " + n1 + " y el segundo número se ha cambiado por " + n2);
+        sc.close();
     }
 }

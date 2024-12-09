@@ -27,5 +27,6 @@ public class Ejercicio8 {
         } else {
             System.out.println("El mayor es");
         }
+        sc.close();
     }
 }

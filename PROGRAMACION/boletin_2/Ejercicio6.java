@@ -92,5 +92,6 @@ public class Ejercicio6 {
             }
 
         } while (opcion != 6);
+        sc.close();
     }
 }

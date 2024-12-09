@@ -34,7 +34,7 @@ public class Ejercicio3 {
      */
 
     public static double pedirDato() {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         double dato;
 
@@ -46,7 +46,7 @@ public class Ejercicio3 {
             }
             ;
         } while (dato < 0);
-
+        sc.close();
         return dato;
     }
 
@@ -88,6 +88,6 @@ public class Ejercicio3 {
         double resultado = superficieCilindro(primerValor, segundoValor);
 
         mostrarDato("La superficie es:", resultado);
-
+        sc.close();
     }
 }

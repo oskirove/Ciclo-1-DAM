@@ -55,5 +55,6 @@ public class ejercicio5 {
             }
 
         } while (numero != 3);
+        sc.close();
     }
 }

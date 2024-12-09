@@ -78,5 +78,6 @@ public class Ejercicio13 {
                     break;
             }
         } while (opcion != 0);
+        sc.close();
     }
 }

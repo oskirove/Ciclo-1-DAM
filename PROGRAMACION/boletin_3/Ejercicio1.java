@@ -70,6 +70,6 @@ public class Ejercicio1 {
         System.out.println();
 
         System.out.println("Hola " + nombre + ", tu número es " + (FuncionPoN(num) == 'P' ? "positivo" : "negativo") + " y además es un número " + ((par(num) == true) ? "par." : "impar."));
-
+        sc.close();
     }
 }

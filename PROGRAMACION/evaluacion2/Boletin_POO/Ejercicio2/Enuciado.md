@@ -17,5 +17,5 @@ Se desea crear una clase que permita gestionar fechas de forma cómoda. Se estab
 ### Programa Principal
 El programa principal (que no estará en la clase `Fecha`) pedirá dos fechas al usuario que guardará en sendos objetos. Mostrará las fechas en formato corto y largo y calculará la diferencia de años llamando a `diferenciaFechas`.
 
-> [!TIP]
+> [!NOTE]
 > **Opcional:** Modifica `diferenciaFechas` para que calcule los días que van de una a otra. Se debe tener en cuenta meses de 30, 31, 28 y 29 días.

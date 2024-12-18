@@ -1,4 +1,4 @@
-package PROGRAMACION.evaluacion2.Boletin_POO;
+package PROGRAMACION.evaluacion2.Boletin_POO.Ejercicio1;
 
 import java.util.Scanner;
 

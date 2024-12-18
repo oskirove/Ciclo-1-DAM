@@ -45,7 +45,7 @@
  Luego muestra claramente los datos de cada uno.
 */
 
-package PROGRAMACION.evaluacion2.Boletin_POO;
+package PROGRAMACION.evaluacion2.Boletin_POO.Ejercicio1;
 
 public class Geometria {
     private boolean figura;

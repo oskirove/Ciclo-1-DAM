@@ -36,19 +36,22 @@ public class IUEmpleado {
     public void mostrar() {
 
         String simboloEuro = "€";
-
-        System.out.println("Mostrar datos del empleado:");
-        System.out.println("1.- Nombre");
-        System.out.println("2.- Apellidos");
-        System.out.println("3.- Edad");
-        System.out.println("4.- DNI");
-        System.out.println("5.- Salario");
-        System.out.println("0.- Todos los datos");
-        System.out.print("Introduce la opción que deseas ver: ");
         Scanner sc = new Scanner(System.in);
-        int opcion = sc.nextInt();
+        int opcion;
 
-        switch (opcion) {
+        do {
+            System.out.println("Mostrar datos del empleado:");
+            System.out.println("1.- Nombre");
+            System.out.println("2.- Apellidos");
+            System.out.println("3.- Edad");
+            System.out.println("4.- DNI");
+            System.out.println("5.- Salario");
+            System.out.println("0.- Todos los datos");
+            System.out.println("9.- Salir");
+            System.out.print("Introduce la opción que deseas ver: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
             case 1:
                 System.out.println("Nombre: " + empleado.getNombre());
                 break;
@@ -64,7 +67,7 @@ public class IUEmpleado {
             case 5:
                 System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
                 System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
-                        empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
+                    empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
                 break;
             case 0:
                 System.out.println("Nombre: " + empleado.getNombre());
@@ -74,12 +77,17 @@ public class IUEmpleado {
                 System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
                 System.out.println("IRPF: " + empleado.getIrpf() + "%");
                 System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
-                        empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
+                    empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
+                break;
+            case 9:
+                System.out.println("Saliendo...");
                 break;
             default:
                 System.out.println("Opción no válida");
                 break;
-        }
+            }
+        } while (opcion != 9);
+
         sc.close();
     }
 }

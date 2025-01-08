@@ -78,6 +78,11 @@ public class Empleado {
         setSalario(40000);
     }
 
+    /**
+     * Método que calcula el salario neto de un empleado
+     * @param salario Salario del empleado
+     * @return Salario neto del empleado
+     */
     public double sablazoHacienda(double salario) {
         double parteHacienda = 0;
 

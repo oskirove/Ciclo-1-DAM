@@ -46,8 +46,7 @@ public class IUEmpleado {
             System.out.println("3.- Edad");
             System.out.println("4.- DNI");
             System.out.println("5.- Salario");
-            System.out.println("0.- Todos los datos");
-            System.out.println("9.- Salir");
+            System.out.println("0.- Salir");
             System.out.print("Introduce la opción que deseas ver: ");
             opcion = sc.nextInt();
 
@@ -70,23 +69,13 @@ public class IUEmpleado {
                     empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
                 break;
             case 0:
-                System.out.println("Nombre: " + empleado.getNombre());
-                System.out.println("Apellidos: " + empleado.getApellidos());
-                System.out.println("Edad: " + empleado.getEdad());
-                System.out.println("DNI: " + empleado.getDni());
-                System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
-                System.out.println("IRPF: " + empleado.getIrpf() + "%");
-                System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
-                    empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
-                break;
-            case 9:
                 System.out.println("Saliendo...");
                 break;
             default:
                 System.out.println("Opción no válida");
                 break;
             }
-        } while (opcion != 9);
+        } while (opcion != 0);
 
         sc.close();
     }

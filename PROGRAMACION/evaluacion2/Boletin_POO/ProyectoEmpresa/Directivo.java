@@ -1,0 +1,92 @@
+package PROGRAMACION.evaluacion2.Boletin_POO.ProyectoEmpresa;
+
+public class Directivo {
+    private String nombre;
+    private String apellidos;
+    private int edad;
+    private String dni;
+    private String departamento;
+    private double beneficio;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getDepartamento() {
+        return "\"" + departamento + "\"";
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento.toUpperCase();
+    }
+    
+    public double getBeneficio() {
+        return beneficio;
+    }
+
+    public void setBeneficio(double beneficio) {
+        if (beneficio > 100 || beneficio < 0) {
+            this.beneficio = 0;
+        } else {
+            this.beneficio = beneficio;
+        }
+    }
+
+    public Directivo() {
+        this.nombre = "";
+        this.apellidos = "";
+        this.dni = "";
+        this.edad = 0;
+        this.departamento = "";
+        this.beneficio = 0;
+    }
+
+    public Directivo(String nombre, String apellidos, String dni, int edad, double salario) {
+        setNombre("Fernándo");
+        setApellidos("Valle Gómez");
+        setDni("9673184T");
+        setEdad(35);
+        setDepartamento("Contabilidad");
+        setBeneficio(29);
+    }
+    /**
+     * Método que calcula la ganancia de un directivo
+     * @param beneficioEmpresa Beneficio de la empresa
+     * @return Ganancia del directivo
+     */
+    //TODO Mirar el beneficio empresa
+    public double gananciaDirectivo(double beneficioEmpresa) {
+
+        beneficio = (getBeneficio()/100) * beneficioEmpresa;
+
+        return beneficio;
+    }
+}

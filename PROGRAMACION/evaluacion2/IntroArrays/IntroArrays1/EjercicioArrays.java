@@ -1,4 +1,4 @@
-package PROGRAMACION.evaluacion2.Boletin_Arrays.IntroArrays;
+package PROGRAMACION.evaluacion2.IntroArrays.IntroArrays1;
 
 import java.util.Scanner;
 

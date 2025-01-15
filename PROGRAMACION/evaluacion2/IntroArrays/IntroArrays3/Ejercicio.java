@@ -69,6 +69,5 @@ public class Ejercicio {
             System.out.printf("%.3s ", i);
         }
         System.out.println();
-
     }
 }

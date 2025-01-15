@@ -15,7 +15,7 @@
     - Escribimos 201 y se cambiarán todos los valores seleccionados de forma simultanea.
 
 3. **Informar de una tarea pendiente (TODO) en la línea 13 de un archivo cuya descripción sea: “Mejorar el interfaz de usuario”. ¿Dónde puedes ver esa tarea pendiente?**
-    - En la línea 13, escribimos `// TODO: Mejorar el interfaz de usuario`.
+    - En la línea 13, escribimos `// TOD0: Mejorar el interfaz de usuario`.
     - Podemos ver todas las tareas pendientes en la extensión Todo tree en el sidebar de vs code.
 
 4. **Duplicar la línea actual justo debajo (sin copiar/pegar).**

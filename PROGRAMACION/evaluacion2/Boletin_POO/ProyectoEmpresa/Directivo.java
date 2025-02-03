@@ -77,16 +77,11 @@ public class Directivo {
         setDepartamento("Contabilidad");
         setBeneficio(29);
     }
-    /**
-     * Método que calcula la ganancia de un directivo
-     * @param beneficioEmpresa Beneficio de la empresa
-     * @return Ganancia del directivo
-     */
-    //TODO Mirar el beneficio empresa
+
     public double gananciaDirectivo(double beneficioEmpresa) {
 
-        beneficio = (getBeneficio()/100) * beneficioEmpresa;
+        double ganancia = (getBeneficio()/100) * beneficioEmpresa;
 
-        return beneficio;
+        return ganancia;
     }
 }

@@ -39,7 +39,7 @@ public class Ventas {
         }
     }
 
-    public int average(int[] month) {
+    public int media(int[] month) {
         this.month = month;
         int sum = 0;
         for (int i = 0; i < month.length; i++) {
@@ -48,7 +48,7 @@ public class Ventas {
         return sum / month.length;
     }
 
-    public void graphic(int[] month) {
+    public void grafico(int[] month) {
         this.month = month;
 
         int index = 0;

@@ -13,7 +13,7 @@ public class Principal {
         System.out.println("Empresa");
         System.out.println("1.- Empleados");
         System.out.println("2.- Directivos");
-        System.out.print("Introduce una opción");
+        System.out.print("Introduce una opción: ");
         int opcion = sc.nextInt();
 
         switch (opcion) {
@@ -30,7 +30,6 @@ public class Principal {
             default:
                 break;
         }
-
         sc.close();
     }
 }

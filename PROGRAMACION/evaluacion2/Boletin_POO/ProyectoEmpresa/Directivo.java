@@ -69,13 +69,13 @@ public class Directivo {
         this.beneficio = 0;
     }
 
-    public Directivo(String nombre, String apellidos, String dni, int edad, double salario) {
-        setNombre("Fernándo");
-        setApellidos("Valle Gómez");
-        setDni("9673184T");
-        setEdad(35);
-        setDepartamento("Contabilidad");
-        setBeneficio(29);
+    public Directivo(String nombre, String apellidos, String dni, String departamento, int edad, double beneficio) {
+        setNombre(nombre);
+        setApellidos(apellidos);
+        setDni(dni);
+        setDepartamento(departamento);
+        setEdad(edad);
+        setBeneficio(beneficio);
     }
 
     public double gananciaDirectivo(double beneficioEmpresa) {

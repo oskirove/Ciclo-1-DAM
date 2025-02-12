@@ -66,7 +66,7 @@ public class IUEmpleado {
             case 5:
                 System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
                 System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
-                    empleado.sablazoHacienda(empleado.getSalario()), simboloEuro);
+                    empleado.Hacienda(empleado.getSalario()), simboloEuro);
                 break;
             case 0:
                 System.out.println("Saliendo...");

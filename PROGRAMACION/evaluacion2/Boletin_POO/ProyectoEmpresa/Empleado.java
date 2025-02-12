@@ -71,11 +71,11 @@ public class Empleado {
     }
 
     public Empleado(String nombre, String apellidos, String dni, int edad, double salario) {
-        setNombre("Eusebio");
-        setApellidos("Valle Gómez");
-        setDni("5673234H");
-        setEdad(35);
-        setSalario(40000);
+        setNombre(nombre);
+        setApellidos(apellidos);
+        setDni(dni);
+        setEdad(edad);
+        setSalario(salario);
     }
 
     /**
@@ -83,7 +83,7 @@ public class Empleado {
      * @param salario Salario del empleado
      * @return Salario neto del empleado
      */
-    public double sablazoHacienda(double salario) {
+    public double Hacienda(double salario) {
         double parteHacienda = 0;
 
         if (salario < 6000) {

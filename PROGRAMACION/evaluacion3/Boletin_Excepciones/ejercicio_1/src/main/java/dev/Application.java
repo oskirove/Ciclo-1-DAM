@@ -9,7 +9,7 @@ public class Application {
 
     int option;
     boolean trigger = false;
-    while (!trigger) { //TODO Solucionado
+    while (!trigger) { 
       try {
         do {
           System.out.println("1.- Convierte de libras a euros");

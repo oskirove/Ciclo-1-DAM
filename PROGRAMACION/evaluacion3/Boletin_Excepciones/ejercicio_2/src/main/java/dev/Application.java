@@ -1,12 +1,11 @@
 
 package dev;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Application {
   public static void main(String[] args) {
-
-    Geometria rectangulo = new Geometria(true, 5, 10);
 
     Geometria triangulo = new Geometria();
 
@@ -16,31 +15,42 @@ public class Application {
     boolean trigger = false;
     while (!trigger) {
       try {
-        System.out.print("Introduce la base del triángulo: ");
-        base = sc.nextDouble();
-        if (base <= 0) {
-          throw new IllegalArgumentException("La base debe ser mayor que 0");
+        boolean triggerBase = false;
+        while (!triggerBase) {
+          try {
+            System.out.print("Introduce la base del triángulo: ");
+            base = sc.nextDouble();
+            triangulo.setBase(base);
+
+            triggerBase = true;
+          } catch (InputMismatchException e) {
+            System.out.println("Error: Valor no permitido.");
+            sc.nextLine();
+          }
         }
 
-        System.out.print("Introduce la altura del triángulo: ");
-        altura = sc.nextDouble();
-        if (altura <= 0) {
-          throw new IllegalArgumentException("La altura debe ser mayor que 0");
+        boolean triggerAltura = false;
+        while (!triggerAltura) {
+          try {
+            System.out.print("Introduce la altura del triángulo: ");
+            altura = sc.nextDouble();
+            triangulo.setAltura(altura);
+
+            triggerAltura = true;
+          } catch (InputMismatchException e) {
+            System.out.println("Error: Valor no permitido.");
+            sc.nextLine();
+          }
         }
 
-        triangulo.setBase(base);
-        triangulo.setAltura(altura);
         trigger = true;
 
-      } catch (IllegalArgumentException e) {
+      } catch (IllegalArgumentException e) {// TODO catch del next SOLUCIONADO
         System.out.println(e.getMessage());
         sc.nextLine();
       }
     }
 
-    System.out.printf("La base del rectangulo es %.2f%n", rectangulo.getBase());
-    System.out.printf("La base del triangulo es %.2f%n", triangulo.getBase());
-    System.out.printf("La altura del rectangulo es %.2f%n", rectangulo.getAltura());
     System.out.printf("La altura del triangulo es %.2f%n", triangulo.getAltura());
     System.out.printf("El area del triangulo es %.2f%n", triangulo.area());
 

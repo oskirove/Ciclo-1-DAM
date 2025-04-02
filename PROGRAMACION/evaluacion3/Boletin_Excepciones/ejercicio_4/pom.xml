@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>dev</groupId>
-  <artifactId>ejercicio_3</artifactId>
+  <artifactId>ejercicio_4</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Pedir Datos</name>
+  <name>Java 11 Application</name>
   <inceptionYear>2020</inceptionYear>
   <organization>
     <name>Organization Name</name>
@@ -25,6 +25,14 @@
 
   <dependencies>
     <!-- Test Dependencies -->
+
+    <dependency>
+      <groupId>dev</groupId>
+      <artifactId>ejercicio_3</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>/home/oscar/DAM/PROGRAMACION/evaluacion3/Boletin_Excepciones/ejercicio_3/target/ejercicio_3-1.0-SNAPSHOT.jar</systemPath>
+    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>

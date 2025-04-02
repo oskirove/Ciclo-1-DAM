@@ -23,15 +23,16 @@ public class Geometria {
         this.base = base;
     }
 
-    public boolean isFigura() {
-        return figura;
-    }
-
     public double getAltura() {
         return altura;
     }
 
-    public void setAltura(double altura) {
+    public void setAltura(double altura) {// TODO throw SOLUCIONADO
+
+        if (altura <= 0) {
+            throw new IllegalArgumentException("La altura debe ser mayor que 0");
+        }
+
         if (altura > 0) {
             this.altura = altura;
         }
@@ -41,7 +42,12 @@ public class Geometria {
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(double base) {// TODO throw SOLUCIONADO
+
+        if (base <= 0) {
+            throw new IllegalArgumentException("La base debe ser mayor que 0");
+        }
+
         if (base > 0) {
             this.base = base;
         }
@@ -72,4 +78,3 @@ public class Geometria {
     }
 
 }
-

@@ -37,23 +37,11 @@ public class IUDirectivo {
         directivo.setBeneficio(beneficio);
     }
 
-    public void mostrar() {
+    public void mostrar() {//TODO
 
         String simboloEuro = "€";
         Scanner sc = new Scanner(System.in);
-        int opcion;
-
-        do {
-            System.out.println("Mostrar datos del directivo:");
-            System.out.println("1.- Nombre");
-            System.out.println("2.- Apellidos");
-            System.out.println("3.- Edad");
-            System.out.println("4.- DNI");
-            System.out.println("5.- Departamento");
-            System.out.println("6.- Gananacias");
-            System.out.println("0.- Salir");
-            System.out.print("Introduce la opción que deseas ver: ");
-            opcion = sc.nextInt();
+        int opcion = 0;
 
             switch (opcion) {
                 case 1:
@@ -73,7 +61,7 @@ public class IUDirectivo {
                     break;
                 case 6:
                     System.out.printf("Ganancia: %.2f%s%n", directivo.gananciaDirectivo(Math.random() * 10000),
-                            simboloEuro);
+                        simboloEuro);
                     break;
                 case 0:
                     System.out.println("Saliendo...");
@@ -82,7 +70,6 @@ public class IUDirectivo {
                     System.out.println("Opción no válida");
                     break;
             }
-        } while (opcion != 0);
         System.out.println();
         sc.close();
     }

@@ -7,12 +7,20 @@ public class Empresa {
     private Directivo directivo;
     private Empleado empleado1;
     private Empleado empleado2;
+    // TODO faltan 3 propiedades: 1 IUDirectivo y 2 IUEMpleado
+    public IUDirectivo IUDirectivo;
+    public IUEmpleado IUEmpleado1;
+    public IUEmpleado IUEmpleado2;
+
 
     public Empresa(Directivo directivo, Empleado empleado1, Empleado empleado2) {
         this.directivo = directivo;
         this.empleado1 = empleado1;
         this.empleado2 = empleado2;
         this.ganancias = 0;
+        IUDirectivo = new IUDirectivo(directivo);
+        IUEmpleado1 = new IUEmpleado(empleado1);
+        IUEmpleado2 = new IUEmpleado(empleado2);
     }
 
     public Empresa(Directivo directivo, Empleado empleado1, Empleado empleado2, double ganancias) {
@@ -20,6 +28,9 @@ public class Empresa {
         this.empleado1 = empleado1;
         this.empleado2 = empleado2;
         this.ganancias = ganancias;
+        IUDirectivo = new IUDirectivo(directivo);
+        IUEmpleado1 = new IUEmpleado(empleado1);
+        IUEmpleado2 = new IUEmpleado(empleado2);
     }
 
     public double getGanancias() {
@@ -257,6 +268,8 @@ public class Empresa {
                     directivo.setDni(sc.next());
                     System.out.print("Nuevo beneficio del directivo: ");
                     directivo.setBeneficio(sc.nextDouble());
+                    System.out.print("Nueva edad del directivo: ");
+                    directivo.setEdad(sc.nextInt());
                     System.out.println("Datos del directivo actualizados.");
                     break;
                 case 2:

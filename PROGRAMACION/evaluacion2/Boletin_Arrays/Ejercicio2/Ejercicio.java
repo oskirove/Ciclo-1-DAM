@@ -97,7 +97,7 @@ public class Ejercicio {
         int numRows = matriz.length;
         int numCols = matriz[0].length;
 
-        if (row1 > numRows || row2 > numRows || col1 > numCols || col2 > numCols) {
+        if (row1 < 0 || row1 >= numRows || row2 < 0 || row2 >= numRows || col1 < 0 || col1 >= numCols || col2 < 0 || col2 >= numCols) {
             return false;
         } else {
             char aux = matriz[row1][col1];
@@ -116,6 +116,7 @@ public class Ejercicio {
         System.out.printf(" El valor mas alto es: %s%n", (char) maxValue(table));
         System.out.printf(" El valor mas bajo es: %s%n", (char) minValue(table));
         System.out.println();
-
+       // changeValues(table, -1, 0, 0, 0);
+        changeValues(table, -1, 0, 0, 0);
     }
 }

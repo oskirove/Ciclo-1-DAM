@@ -66,7 +66,7 @@ public class Ejercicio {
         System.out.println("Apartado J");
 
         for (String i : var3) {
-            System.out.printf("%.3s ", i);
+            System.out.printf("%.3s\n", i);
         }
         System.out.println();
     }

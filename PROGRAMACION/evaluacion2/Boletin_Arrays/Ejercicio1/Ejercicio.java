@@ -15,7 +15,7 @@ public class Ejercicio {
         int[] vector = new int[n];
 
         for (int i = 0; i < n; i++) {
-            vector[i] = (int) (Math.random() * 4000 + 1000);
+            vector[i] = (int) (Math.random() * 4001 + 1000);
         }
 
         return vector;
@@ -79,7 +79,7 @@ public class Ejercicio {
      */
     public static boolean changeValues(int[] vector, int index1, int index2) {
 
-        if (index1 > vector.length || index2 > vector.length) {
+        if (index1 < 1 || index2 < 1 || index1 > vector.length || index2 > vector.length) {
             return false;
         } else {
             index1--;

@@ -78,7 +78,7 @@ public class Fecha {
     }
 
     public static int diferenciaFechas(Fecha fecha1, Fecha fecha2) {
-        int dif = fecha2.getAño() - fecha1.getAño();
+        int dif = fecha2.getAño() - fecha1.getAño();//abs
         return dif;
     }
 }

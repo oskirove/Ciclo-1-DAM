@@ -33,24 +33,13 @@ public class IUEmpleado {
         empleado.setSalario(salario);
     }
 
-    public void mostrar() {
+    public void mostrar() {// TODO dos sobrecargas, una con param y otra sin
 
-        String simboloEuro = "€";
         Scanner sc = new Scanner(System.in);
-        int opcion;
+        int opcion = sc.nextInt();
+        String simboloEuro = "€";
 
-        do {
-            System.out.println("Mostrar datos del empleado:");
-            System.out.println("1.- Nombre");
-            System.out.println("2.- Apellidos");
-            System.out.println("3.- Edad");
-            System.out.println("4.- DNI");
-            System.out.println("5.- Salario");
-            System.out.println("0.- Salir");
-            System.out.print("Introduce la opción que deseas ver: ");
-            opcion = sc.nextInt();
-
-            switch (opcion) {
+        switch (opcion) {
             case 1:
                 System.out.println("Nombre: " + empleado.getNombre());
                 break;
@@ -66,7 +55,7 @@ public class IUEmpleado {
             case 5:
                 System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
                 System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
-                    empleado.Hacienda(empleado.getSalario()), simboloEuro);
+                        empleado.Hacienda(empleado.getSalario()), simboloEuro);
                 break;
             case 0:
                 System.out.println("Saliendo...");
@@ -74,9 +63,38 @@ public class IUEmpleado {
             default:
                 System.out.println("Opción no válida");
                 break;
-            }
-        } while (opcion != 0);
-
+        }
         sc.close();
+    }
+
+    public void mostrar(int opcion) {// TODO dos sobrecargas, una con param y otra sin
+
+        String simboloEuro = "€";
+
+        switch (opcion) {
+            case 1:
+                System.out.println("Nombre: " + empleado.getNombre());
+                break;
+            case 2:
+                System.out.println("Apellidos: " + empleado.getApellidos());
+                break;
+            case 3:
+                System.out.println("Edad: " + empleado.getEdad());
+                break;
+            case 4:
+                System.out.println("DNI: " + empleado.getDni());
+                break;
+            case 5:
+                System.out.printf("Salario: %.2f%s%n", empleado.getSalario(), simboloEuro);
+                System.out.printf("La parte que se lleva Hacienda es de %.2f%s%n",
+                        empleado.Hacienda(empleado.getSalario()), simboloEuro);
+                break;
+            case 0:
+                System.out.println("Saliendo...");
+                break;
+            default:
+                System.out.println("Opción no válida");
+                break;
+        }
     }
 }

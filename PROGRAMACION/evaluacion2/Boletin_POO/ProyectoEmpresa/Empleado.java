@@ -50,7 +50,7 @@ public class Empleado {
 
         if (salario < 6000) {
             irpf = 7.5;
-        } else if (salario > 6000 && salario < 30000) {
+        } else if (salario >= 6000 && salario < 30000) {
             irpf = 15;
         } else {
             irpf = 20;
@@ -67,7 +67,7 @@ public class Empleado {
         this.dni = "";
         this.edad = 0;
         this.salario = 0;
-        this.irpf = 0;
+        this.irpf = 7.5;
     }
 
     public Empleado(String nombre, String apellidos, String dni, int edad, double salario) {
@@ -86,13 +86,13 @@ public class Empleado {
     public double Hacienda(double salario) {
         double parteHacienda = 0;
 
-        if (salario < 6000) {
-            parteHacienda = salario * 0.075;
-        } else if (salario > 6000 && salario < 30000) {
-            parteHacienda = salario * 0.15;
-        } else {
-            parteHacienda = salario * 0.20;
-        }
+        parteHacienda = salario * irpf/100;
+        // if (salario < 6000) {
+        // } else if (salario > 6000 && salario < 30000) {
+        //     parteHacienda = salario * 0.15;
+        // } else {
+        //     parteHacienda = salario * 0.20;
+        // }
 
         return parteHacienda;
     }

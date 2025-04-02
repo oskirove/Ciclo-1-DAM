@@ -84,7 +84,7 @@ public class Ejercicio {
      */
 
     public static boolean changeValue(ArrayList<Integer> collection, int index1, int index2) {
-        if (index1 >= collection.size() || index2 >= collection.size()) {
+        if (index1 < 0 || index2 < 0 || index1 >= collection.size() || index2 >= collection.size()) {
 
             return false;
         } else {
@@ -118,7 +118,7 @@ public class Ejercicio {
         ArrayList<Integer> collection = createCollection(4);
         showCollection(collection);
 
-        deleteValues(collection, 2100);
+        changeValue(collection, 2,6);
 
         showCollection(collection);
     }

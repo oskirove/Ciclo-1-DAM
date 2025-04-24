@@ -1,8 +1,14 @@
 
 package dev;
 
+import dev.Geometria.Figura;
+
 public class Application {
   public static void main(String[] args) {
-    System.out.println("Hello World!");
+    
+    Figura figura = new Figura();
+
+    figura.pedirDatos();
+    figura.mostrarDatos();
   }
 }

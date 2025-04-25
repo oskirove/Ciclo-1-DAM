@@ -54,27 +54,42 @@ public class Figura implements InterfazUsuario {
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
 
-        boolean trigger = false;
+        boolean triggerOrigen = false;
+        boolean triggerName = false;
 
-        while (!trigger) {
+        while (!triggerName) {
             try {
+
                 System.out.print("Introduce el nombre de la figura: ");
                 String nombre = sc.nextLine();
                 setNombre(nombre);
-    
-                System.out.println("Introduce el origen de la figura");
-    
+
+                triggerName = true;
+
+            } catch (IllegalArgumentException e) {
+                System.out.println();
+                System.out.println(e.getMessage());
+                System.out.println();
+            }
+        }
+
+        System.out.println("Introduce el origen de la figura");
+
+        while (!triggerOrigen) {
+            try {
                 double x = Libreria.pedirReal("Introduce la coordenada x: ");
-    
+
                 double y = Libreria.pedirReal("Introduce la coordenada y: ");
-    
+
                 Punto origen = new Punto(x, y);
                 setOrigen(origen);
 
-                trigger = true;
-    
+                triggerOrigen = true;
+
             } catch (IllegalArgumentException e) {
+                System.out.println();
                 System.out.println(e.getMessage());
+                System.out.println();
             }
         }
     }

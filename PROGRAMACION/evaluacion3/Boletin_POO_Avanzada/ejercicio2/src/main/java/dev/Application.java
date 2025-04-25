@@ -1,14 +1,14 @@
 
 package dev;
 
-import dev.Geometria.Figura;
+import dev.Geometria.Linea;
 
 public class Application {
   public static void main(String[] args) {
     
-    Figura figura = new Figura();
+    Linea linea = new Linea();
 
-    figura.pedirDatos();
-    figura.mostrarDatos();
+    linea.pedirDatos();
+    linea.mostrarDatos();
   }
 }

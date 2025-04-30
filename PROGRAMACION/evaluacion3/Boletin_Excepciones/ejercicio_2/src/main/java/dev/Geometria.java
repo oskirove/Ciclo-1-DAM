@@ -27,23 +27,21 @@ public class Geometria {
         return altura;
     }
 
-    public void setAltura(double altura) {// TODO throw SOLUCIONADO
+    public void setAltura(double altura) {
 
         if (altura <= 0) {
             throw new IllegalArgumentException("La altura debe ser mayor que 0");
         }
 
-        if (altura > 0) {
-            this.altura = altura;
-        }
+        this.altura = altura;
+
     }
 
     public double getBase() {
         return base;
     }
 
-    public void setBase(double base) {// TODO throw SOLUCIONADO
-
+    public void setBase(double base) { 
         if (base <= 0) {
             throw new IllegalArgumentException("La base debe ser mayor que 0");
         }

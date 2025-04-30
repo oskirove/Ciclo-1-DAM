@@ -5,8 +5,7 @@ public class Punto {
     public double y;
 
     public Punto(){
-        y = 0;
-        x = 0;
+        this(0, 0);
     }
 
     public Punto(double x, double y) {
@@ -16,7 +15,7 @@ public class Punto {
 
     @Override
     public String toString(){
-        return "(" + x + ", " + y +")";
+        return String.format("(%.1f, %.1f)", x, y);
     }
     
 }

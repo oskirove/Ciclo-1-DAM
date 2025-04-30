@@ -19,7 +19,7 @@ public class Cadenas {
 
     public static void subCadena(String cadena, int inicio, int numCaracteres) {
 
-        try {
+        try {//quitar try's
             if (inicio > cadena.length()) {
                 throw new FueraDeLimites(
                         "El indice de inicio es mayor que la longitud de la cadena.");

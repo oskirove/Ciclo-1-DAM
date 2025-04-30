@@ -6,15 +6,12 @@ import dev.interfaz.InterfazUsuario;
 import dev.interfaz.Libreria;
 
 public class Figura implements InterfazUsuario {
-    private Punto origen;
-    private String nombre;
+    protected Punto origen;
+    protected String nombre;
 
-    public void setOrigen(Punto origen) {
+    public void setOrigen(Punto origen) { 
         if (origen == null) {
             throw new IllegalArgumentException("Error: Debes introducir un origen ");
-        }
-        if (origen.x < 0 || origen.y < 0) {
-            throw new IllegalArgumentException("Error: El origen no puede ser negativo");
         }
 
         this.origen = origen;
@@ -29,8 +26,8 @@ public class Figura implements InterfazUsuario {
             throw new IllegalArgumentException("Error: La figura debe tener un nombre");
         }
 
-        if (nombre == "") {
-            throw new IllegalArgumentException("Error: La figura no puede tener un nombre vacio");
+        if (nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("Error: La figura no puede tener un nombre vacío");
         }
 
         this.nombre = nombre.trim().toUpperCase();
@@ -41,20 +38,19 @@ public class Figura implements InterfazUsuario {
     }
 
     public Figura() {
-        origen = new Punto();
-        nombre = "";
+
+        this(new Punto(), "");
     }
 
     public Figura(Punto origen, String nombre) {
         this.origen = origen;
-        this.nombre = nombre.trim().toUpperCase();
+        setNombre(nombre);
     }
 
     @Override
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
 
-        boolean triggerOrigen = false;
         boolean triggerName = false;
 
         while (!triggerName) {
@@ -75,23 +71,12 @@ public class Figura implements InterfazUsuario {
 
         System.out.println("Introduce el origen de la figura");
 
-        while (!triggerOrigen) {
-            try {
-                double x = Libreria.pedirReal("Introduce la coordenada x: ");
+        double x = Libreria.pedirReal("Introduce la coordenada x: ");
 
-                double y = Libreria.pedirReal("Introduce la coordenada y: ");
+        double y = Libreria.pedirReal("Introduce la coordenada y: ");
 
-                Punto origen = new Punto(x, y);
-                setOrigen(origen);
-
-                triggerOrigen = true;
-
-            } catch (IllegalArgumentException e) {
-                System.out.println();
-                System.out.println(e.getMessage());
-                System.out.println();
-            }
-        }
+        Punto origen = new Punto(x, y);
+        setOrigen(origen);
     }
 
     @Override

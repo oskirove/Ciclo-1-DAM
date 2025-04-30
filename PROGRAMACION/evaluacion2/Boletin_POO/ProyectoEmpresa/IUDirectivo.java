@@ -37,7 +37,7 @@ public class IUDirectivo {
         directivo.setBeneficio(beneficio);
     }
 
-    public void mostrar() {//TODO
+    public void mostrar() {
 
         String simboloEuro = "€";
         Scanner sc = new Scanner(System.in);

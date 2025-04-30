@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Funciones {
-    public static int solicitarEntero(String mensage, int inicio, int fin) {//TODO 3 params SOLUCIONADO
+    public static int solicitarEntero(String mensage, int inicio, int fin) {
         Scanner sc = new Scanner(System.in);
 
         int entero = 0;
@@ -37,7 +37,7 @@ public class Funciones {
         return entero;
     }
 
-    public static double solicitarReal(String mensage, int inicio, int fin) {//TODO 3 params SOLUCIONADO
+    public static double solicitarReal(String mensage, int inicio, int fin) {
         Scanner sc = new Scanner(System.in);
 
         double real = 0;

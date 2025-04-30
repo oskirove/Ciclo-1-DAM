@@ -24,7 +24,7 @@ public class Ejercicio {
      * @param numCaracteres el número de caracteres a incluir en la subcadena
      */
 
-    public static void subCadena(String cadena, int inicio, int numCaracteres) {//TODO devuelve y revisar comprobación
+    public static void subCadena(String cadena, int inicio, int numCaracteres) {
         if (inicio > cadena.length() || numCaracteres > cadena.length()) {
             System.out.println("");
         } else {
@@ -77,7 +77,7 @@ public class Ejercicio {
      * Muestra una cadena de texto empezando por el final.
      * @param cadena es la cadena de texto que mostraremos del revés
      */
-    public static String alReves(String cadena) { //TODO devuelve y revisar
+    public static String alReves(String cadena) {
         for (int i = cadena.length() - 1; i >= 0; i--) {
             cadena.charAt(i);
         }

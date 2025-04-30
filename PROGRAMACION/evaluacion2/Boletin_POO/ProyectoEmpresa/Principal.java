@@ -2,7 +2,7 @@ package PROGRAMACION.evaluacion2.Boletin_POO.ProyectoEmpresa;
 
 import java.util.Scanner;
 
-public class Principal {//TODO revisar especificacion
+public class Principal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);   
 

@@ -1,14 +1,14 @@
 
 package dev;
 
-import dev.Geometria.Linea;
+import dev.Geometria.Poligono;
+import dev.Geometria.Punto;
 
 public class Application {
   public static void main(String[] args) {
     
-    Linea linea = new Linea();
+    Poligono poligono = new Poligono("triangulo", new Punto(0,0),9);
 
-    linea.pedirDatos();
-    linea.mostrarDatos();
+
   }
 }

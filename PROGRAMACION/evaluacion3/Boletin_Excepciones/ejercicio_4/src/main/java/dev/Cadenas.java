@@ -16,7 +16,7 @@ public class Cadenas {
 
     public static void subCadena(String cadena, int inicio, int numCaracteres) {
 
-        try {
+       
             if (inicio > cadena.length()) {
                 throw new IllegalArgumentException(
                         "El indice de inicio es mayor que la longitud de la cadena.");
@@ -35,9 +35,7 @@ public class Cadenas {
 
             System.out.println();
 
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
+     
     }
 
     /**
@@ -47,7 +45,7 @@ public class Cadenas {
      */
     public static void muestraCentrado(String cadena) {
 
-        try {
+        
             if (cadena.length() > 68) {
                 throw new IllegalArgumentException("La cadena no puede tener mas de 68 caracteres.");
             }
@@ -63,9 +61,7 @@ public class Cadenas {
                 System.out.print(" ");
             }
             System.out.println();
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
+        
     }
 
     public static String solicitarCadena() {

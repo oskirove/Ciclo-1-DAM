@@ -45,7 +45,7 @@ public class Application {
 
         trigger = true;
 
-      } catch (IllegalArgumentException e) {// TODO catch del next SOLUCIONADO
+      } catch (IllegalArgumentException e) {
         System.out.println(e.getMessage());
         sc.nextLine();
       }

@@ -33,7 +33,7 @@ public class IUEmpleado {
         empleado.setSalario(salario);
     }
 
-    public void mostrar() {// TODO dos sobrecargas, una con param y otra sin
+    public void mostrar() {
 
         Scanner sc = new Scanner(System.in);
         int opcion = sc.nextInt();
@@ -67,7 +67,7 @@ public class IUEmpleado {
         sc.close();
     }
 
-    public void mostrar(int opcion) {// TODO dos sobrecargas, una con param y otra sin
+    public void mostrar(int opcion) {
 
         String simboloEuro = "€";
 

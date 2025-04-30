@@ -7,7 +7,6 @@ public class Empresa {
     private Directivo directivo;
     private Empleado empleado1;
     private Empleado empleado2;
-    // TODO faltan 3 propiedades: 1 IUDirectivo y 2 IUEMpleado
     public IUDirectivo IUDirectivo;
     public IUEmpleado IUEmpleado1;
     public IUEmpleado IUEmpleado2;

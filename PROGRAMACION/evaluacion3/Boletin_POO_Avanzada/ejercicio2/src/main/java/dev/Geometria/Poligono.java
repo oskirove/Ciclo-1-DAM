@@ -9,7 +9,7 @@ public class Poligono extends Figura {
     public Poligono() {
         this("triangulo", new Punto(0, 0), 3);
 
-        this.puntos = new Punto[3];
+       // this.puntos = new Punto[3];
 
         puntos[0] = new Punto(0, 0);
         puntos[1] = new Punto(1, 1);
@@ -17,7 +17,7 @@ public class Poligono extends Figura {
     }
 
     public Poligono(String nombre, Punto centro, int cantidadPuntos) {
-        this.nombre = nombre;
+        this.nombre = nombre;//TODO super()
         this.origen = centro;
         this.puntos = new Punto[cantidadPuntos];
 

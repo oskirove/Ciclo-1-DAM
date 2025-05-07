@@ -9,7 +9,7 @@ public class Figura implements InterfazUsuario {
     protected Punto origen;
     protected String nombre;
 
-    public void setOrigen(Punto origen) { 
+    public void setOrigen(Punto origen) {
         if (origen == null) {
             throw new IllegalArgumentException("Error: Debes introducir un origen ");
         }
@@ -26,10 +26,6 @@ public class Figura implements InterfazUsuario {
             throw new IllegalArgumentException("Error: La figura debe tener un nombre");
         }
 
-        if (nombre.trim().isEmpty()) {
-            throw new IllegalArgumentException("Error: La figura no puede tener un nombre vacío");
-        }
-
         this.nombre = nombre.trim().toUpperCase();
     }
 
@@ -38,7 +34,6 @@ public class Figura implements InterfazUsuario {
     }
 
     public Figura() {
-
         this(new Punto(), "");
     }
 
@@ -81,7 +76,8 @@ public class Figura implements InterfazUsuario {
 
     @Override
     public void mostrarDatos() {
-        System.out.println("El nombre de la figura es: " + getNombre());
-        System.out.println("El origen de la figura es: " + getOrigen());
+        System.out.println("Tipo: " + getClass().getSimpleName().toUpperCase());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Origen: " + getOrigen());
     }
 }

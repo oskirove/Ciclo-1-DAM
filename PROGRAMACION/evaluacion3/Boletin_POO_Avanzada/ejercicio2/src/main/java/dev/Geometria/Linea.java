@@ -37,6 +37,6 @@ public class Linea extends Figura{
     @Override
     public void mostrarDatos(){
         super.mostrarDatos();
-        System.out.println("El origen de la figura es: " + getPuntoFinal());
+        System.out.println("Fin: " + getPuntoFinal());
     }
 }

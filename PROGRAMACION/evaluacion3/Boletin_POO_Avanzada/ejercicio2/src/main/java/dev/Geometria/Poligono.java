@@ -1,5 +1,7 @@
 package dev.Geometria;
 
+import dev.interfaz.Libreria;
+
 public class Poligono extends Figura {
 
     public Punto[] puntos;
@@ -28,6 +30,23 @@ public class Poligono extends Figura {
     public void pedirDatos() {
         super.pedirDatos();
 
-        
+        int cantidadPuntos = Libreria.pedirEntero("Introduce una cantidad de puntos: ");
+
+        puntos = new Punto[cantidadPuntos];
+
+        for (int i = 0; i < cantidadPuntos; i++) {
+            puntos[i] = new Punto(Math.random() * 10, Math.random() * 10);
+        }
+    }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+
+        System.out.println("Los puntos son: ");
+
+        for (Punto row : puntos) {
+            System.out.println(row);
+        }
     }
 }

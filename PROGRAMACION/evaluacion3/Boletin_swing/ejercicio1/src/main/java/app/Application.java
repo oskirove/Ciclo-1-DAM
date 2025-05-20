@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class Application {
+public class Application {//TODO estructuración en clases. DEbe funcionar el enter en txf
   public static void main(String[] args) {
     JFrame frame = new JFrame("Aplicación dado");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,4 +1,4 @@
-## Enunciado
+## Ejercicio 6
 
 Crea un formulario con:
 

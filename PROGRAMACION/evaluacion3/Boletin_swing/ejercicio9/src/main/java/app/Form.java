@@ -51,7 +51,7 @@ public class Form extends JFrame implements ActionListener {
         for (int i = 0; i < 3; i++) {
             crearBomba();
         }
-        
+
         timer.start();
         timerBombas.start();
         timerInrtervalo.start();
@@ -63,7 +63,7 @@ public class Form extends JFrame implements ActionListener {
         Image imgBombaFinal = imagenBomba.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 
         JLabel bomba = new JLabel(new ImageIcon(imgBombaFinal));
-        int randomX = (int) (Math.random() * 400) + 50;
+        int randomX = (int) (Math.random() * 700) + 50;
         bomba.setBounds(randomX, 0, 50, 50);
         bombas.add(bomba);
         this.add(bomba);
@@ -120,7 +120,7 @@ public class Form extends JFrame implements ActionListener {
                         Form.this.repaint();
 
                         for (JLabel b : bombas) {
-                            int randomX = (int) (Math.random() * 400) + 50;
+                            int randomX = (int) (Math.random() * 700) + 50;
                             b.setIcon(new ImageIcon(new ImageIcon("src/main/java/app/public/bomb.png").getImage()
                                     .getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
                             b.setBounds(randomX, 0, 50, 50);
@@ -141,6 +141,11 @@ public class Form extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnLeft) {
+            ImageIcon iconoAbelLeft = new ImageIcon("src/main/java/app/public/abelLeft.png");
+            Image imagenAbelLeft = iconoAbelLeft.getImage();
+            Image imgAbelFinalLeft = imagenAbelLeft.getScaledInstance(70, 145, Image.SCALE_SMOOTH);
+
+            abel.setIcon(new ImageIcon(imgAbelFinalLeft));
             abel.setBounds(abel.getX() - 16, abel.getY(), abel.getWidth(), abel.getHeight());
 
             if (abel.getX() < 0) {
@@ -148,6 +153,11 @@ public class Form extends JFrame implements ActionListener {
             }
 
         } else if (e.getSource() == btnRight) {
+            ImageIcon iconoAbel = new ImageIcon("src/main/java/app/public/abel.png");
+            Image imagenAbel = iconoAbel.getImage();
+            Image imgAbelFinal = imagenAbel.getScaledInstance(70, 145, Image.SCALE_SMOOTH);
+
+            abel.setIcon(new ImageIcon(imgAbelFinal));
             abel.setBounds(abel.getX() + 16, abel.getY(), abel.getWidth(), abel.getHeight());
 
             if (abel.getX() > 730) {

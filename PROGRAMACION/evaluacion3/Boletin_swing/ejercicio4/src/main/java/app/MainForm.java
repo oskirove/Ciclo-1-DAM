@@ -39,7 +39,7 @@ public class MainForm extends JFrame implements ActionListener {
 
         txfEdad = new JTextField();
         txfEdad.setBounds(20, 90, 200, 30);
-        txfEdad.addActionListener(this);
+        //txfEdad.addActionListener(this);
         this.add(txfEdad);
 
         txtDir = new JLabel("Introduce tu dirección");
@@ -48,7 +48,7 @@ public class MainForm extends JFrame implements ActionListener {
 
         txfDir = new JTextField();
         txfDir.setBounds(20, 150, 200, 30);
-        txfDir.addActionListener(this);
+      //  txfDir.addActionListener(this);
         this.add(txfDir);
 
         JButton BtnGuardar = new JButton("Guardar");
@@ -66,7 +66,7 @@ public class MainForm extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String comando = e.getActionCommand().toLowerCase();
 
-        if ("Guardar".toLowerCase().equals(comando)) {
+        if ("Guardar".toLowerCase().equals(comando)) {// getSource
             try {
                 String nombre = txfNombre.getText().trim();
                 String edad = txfEdad.getText().trim();
@@ -107,7 +107,7 @@ public class MainForm extends JFrame implements ActionListener {
         } else if ("Cargar".toLowerCase().equals(comando)) {
             try {
 
-                FileReader r = new FileReader("datos");
+                FileReader r = new FileReader("datos");//TODO Scanner
                 int c;
                 StringBuilder sb = new StringBuilder();
 
@@ -120,7 +120,7 @@ public class MainForm extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, sb.toString(), "Contenido del archivo",
                         JOptionPane.INFORMATION_MESSAGE);
 
-            } catch (Exception ex) {
+            } catch (Exception ex) {//TODO excepción no genérica    
                 JOptionPane.showMessageDialog(this, "No se pudo cargar el archivo", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }

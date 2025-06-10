@@ -23,7 +23,7 @@ public class Form extends JFrame implements ActionListener {
 
     public Form() {
         super("Rúa do Príncipe");
-        ImageIcon iconoFondo = new ImageIcon("src/main/java/app/public/bg.png"); // Cambia la ruta según corresponda
+        ImageIcon iconoFondo = new ImageIcon("src/main/java/app/public/bg.png");
         Image imagenFondo = iconoFondo.getImage();
         BgImg BgImg = new BgImg(imagenFondo);
         BgImg.setLayout(null);
